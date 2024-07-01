@@ -13,7 +13,7 @@ const InvestModal = ({ show, handleClose }) => {
           Investments Portfolio: Fixed invest: members and non members are
           encouraged to invest a fixed amount of money and can earn about 25% to
           60% within 6 to 12months. Agriculture Package: Members are to invest
-          as small as 5000 In the cassava processing farm operated by the
+          as small as ₦5000 In the cassava processing farm operated by the
           cooperative and can earn at least 5% ROI on amount invested. Real
           Estate: Members and non members can invest in the real estates
           investments portfolio of the corporative and earn At most 70% returns,

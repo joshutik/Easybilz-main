@@ -21,8 +21,8 @@ const SavingModal = ({ show, handleClose }) => {
           invest with the corporative and use their ROI to cover for all their
           reoccurring daily, monthly and household demands. Ajo (contribution
           packages): Members are required to choose a contribution plan that
-          fits their budget. 20k for 200k 50k for 500k 10k for 100k 5k for 50k
-          3k for 30k.
+          fits their budget. ₦20,000 for ₦200,000 ₦50,000 for ₦500,000 ₦10,000 for ₦100,000 ₦5,000 for ₦50,000
+          ₦3,000 for ₦30,000.
         </p>
       </Modal.Body>
       <Modal.Footer>
