@@ -63,6 +63,8 @@
 
     }
 
+    
+
     .hero-img-1 {
       width: 30rem !important;
       height: 30rem;
@@ -89,6 +91,10 @@
 
     .parent {
       margin-top: 5rem !important;
+    }
+
+    .hero-img {
+      margin-top: 2rem !important;
     }
 
     .path-logo {
