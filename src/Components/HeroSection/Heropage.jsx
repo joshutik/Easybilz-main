@@ -105,7 +105,7 @@ const Heropage = () => {
             </div>
              <div className="col-lg-6 col-md-6 col-sm-12 hero-bg position-relative">
               <div className="hero-img mt-0">
-                <img src={img1} alt="lady with phone" className="img-fluid pt-5 mt-lg-5 hero-img-1" />
+                <img src={img1} alt="lady with phone" className="img-fluid pt-5 mt-lg-5 hero-img-1 w-100" />
                 <img
                   src={img2}
                   alt="logo parthern"
@@ -117,7 +117,7 @@ const Heropage = () => {
         </div>
       </section>
       <section>
-        <div className="container-fluid w-100 px-5">
+        <div className="container-fluid w-100 px-lg-4">
   
             <div className="card who-card rounded-5 py-5">
               <div className="row text-light align-items-center justify-content-center">
