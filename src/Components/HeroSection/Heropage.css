@@ -1,0 +1,252 @@
+
+/* .nav, .btn-hero{
+    background-color: #10436B !important;
+
+}
+
+.btn-login {
+    color: #FFDE00 !important;
+    border: 2px solid #FFDE00 !important;
+}
+
+.hero-page {
+    background-image: url(../assets/heroBg.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 112vh !important;
+}
+
+.hero-bg {
+    background-image: url(../assets/TransLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 48%;
+    height: 99vh;
+}
+.invest {
+    color: #10436B !important;
+}
+.grow{
+    color: #FFDE00 !important;
+}
+
+.hero-img{
+    width: 100% !important;
+}
+
+.hero-img > img {
+    width: 505 !important;
+ 
+}
+.who-card {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(180deg, #1C74BB 0%, #0D3555 100%);
+    min-height: 53vh  !important;
+
+}
+
+.vr {
+   height: 300px;
+}
+
+@media screen and (max-width:768px) {
+.who-card {
+    margin-top: 5rem !important;
+}
+} */
+
+
+
+/* .btn-login {
+    color: #FFDE00 !important;
+    border: 2px solid #FFDE00 !important;
+}
+
+
+
+.hero-page {
+    background-image: url(../assets/heroBg.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 100vh !important;
+}
+
+.hero-bg {
+    background-image: url(../assets/TransLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 48%;
+    height: 99vh;
+}
+.invest {
+    color: #10436B !important;
+}
+.grow{
+    color: #FFDE00 !important;
+}
+
+.hero-page {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  .hero-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-page p {
+    font-size: 1.1rem;
+  }
+  
+  .btn-hero {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .hero-bg {
+    position: relative;
+  }
+  
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .who-card {
+    background-color: #343a40;
+  }
+  
+  .who-card h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .who-card p {
+    font-size: 1.1rem;
+  } */
+  
+  /* .vr {
+    height: 100%;
+    border-left: 2px solid #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-page h1 {
+      font-size: 2rem;
+    }
+  
+    .who-card h2 {
+      font-size: 1.5rem;
+    }
+  
+    .who-card p {
+      font-size: 1rem;
+    }
+  
+    .vr {
+      display: none;
+    }
+  } */
+
+
+  .nav, .btn-hero {
+    background-color: #10436B !important;
+}
+
+.btn-login {
+    color: #FFDE00 !important;
+    border: 2px solid #FFDE00 !important;
+}
+
+.hero-page {
+    background-image: url(../assets/heroBg.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 112vh !important;
+}
+
+.hero-bg {
+    background-image: url(../assets/TransLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* width: 100%; */
+    height: 100vh;
+}
+
+.invest-1 {
+    color: #10436B !important;
+}
+
+.grow {
+    color: #FFDE00 !important;
+}
+
+/* .hero-img {
+    /* width: 100% !important; */
+    /* min-height: 100% !important; */
+    /* overflow: hidden; 
+} */
+
+/* .hero-img > img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+} */
+
+.who-card {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(180deg, #1C74BB 0%, #0D3555 100%);
+    min-height: 53vh  !important;
+}
+
+.vr {
+    height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .hero-page{
+    min-height: 110vh !important;
+    padding-bottom: 5rem;
+  }
+    .who-card {
+      /* margin-top: 5rem !important; */
+      width: 100% !important;
+      padding:1rem;
+        
+    }
+
+    /* .hero-img {
+      padding-bottom: 10rem;
+      text-align: center;
+    } */
+    
+    /* .hero-img > img {
+      width: 43.5% !important; 
+      height: auto;
+       object-fit: cover;
+    } */
+
+    hero
+    
+    .path-logo {
+      margin-top: 13rem;
+      display: none;
+    }
+    
+    
+  }
+  @media screen and (max-width: 565px) {
+    .hero-page{
+      min-height: 100vh !important;
+      /* padding-bottom: 5rem; */
+    }
+
+    /* .hero-img > img {
+      width: 60% !important; 
+      height: auto; 
+      object-fit: cover; 
+    } */
+
+  }

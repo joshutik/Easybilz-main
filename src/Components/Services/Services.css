@@ -1,0 +1,26 @@
+/* Savings */
+.circle {
+    /* Ellipse 16 */
+    width: 161px;
+    height: 161px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.invest {
+    background-color: #FFDE0033 !important;
+}
+
+.savings {
+    background-color: #1C74BB33 !important;
+}
+
+.card {
+    height: 100% !important;
+}
+
+.bord {
+    border: 1px solid #FFDE00 !important;
+}

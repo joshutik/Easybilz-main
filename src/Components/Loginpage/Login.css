@@ -1,0 +1,58 @@
+.login-bg {
+    background-image: url(../assets/Login-bg.png);
+    background-repeat: no-repeat !important;
+    background-size: 50% 100%!important;
+    min-height: 100vh !important;
+    padding-bottom: 8rem !important;
+}
+
+.login-btn {
+    background-color: #10436B !important;
+}
+
+.rem, .forgot {
+    color: #10436B !important;
+    font-weight: 800 !important;
+}
+
+.partarn {
+    margin-top: -80px;
+}
+
+@media screen and (max-width:766px) {
+    .login-bg {
+        background-image: url(../assets/Login-bg.png) !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: 30% 10% !important;
+        color: white !important;
+        padding-bottom: 0rem !important;
+    }
+    .rem, .forgot {
+        color: white !important;
+        font-weight: 800 !important;
+    }
+
+    .tp-pathern{
+        display: none !important;
+    }
+
+    .partarn {
+        margin-top:0px !important;
+    }
+}
+
+@media screen and (max-width:765px) {
+    .login-btn {
+        background-color: white !important;
+        color: black !important;
+        margin-bottom: 30px;
+    }
+    .partarn {
+        margin-top:-40px !important;
+    } 
+
+    .fogot, .register {
+        color: white;
+    }
+}

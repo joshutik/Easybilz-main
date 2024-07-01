@@ -1,0 +1,15 @@
+.nav, .btn-hero{
+    background-color: #10436B !important;
+}
+
+.btn-login {
+    color: #FFDE00 !important;
+    border: 2px solid #FFDE00 !important;
+}
+
+
+
+.nav-link:focus {
+    color: #FFDE00 !important;
+    border-bottom: 2px solid #FFDE00 !important;
+}
