@@ -1,4 +1,4 @@
-.bg-faq {
+/* .bg-faq {
     background-color: #F1F1F1 !important;
 }
 
@@ -8,4 +8,45 @@ background-color: #94cdfb !important;
 
 .faq-bg-1 {
     background-color: aliceblue !important;
-}
+} */
+
+
+  
+  .container-faq {
+    background-color: #f8f9fa; /* Adjust as needed */
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .bg-faq {
+    background-color: #e0e0e0; /* Adjust as needed */
+  }
+  
+  .faq-bg {
+    background-color: white !important; /* Adjust as needed */
+    color:black !important;
+  }
+  
+  .faq-bg-1 .accordion-button:not(.collapsed) {
+    background-color: #007bff; /* Adjust as needed */
+    color: #ffffff;
+  }
+  
+  .faq-bg-1 .accordion-button {
+    background-color: #6c757d; /* Adjust as needed */
+    color: #ffffff;
+  }
+  
+  .text-center {
+    background: none; /* Keep or adjust as needed */
+  }
+  
+  .faq-bg-1 .accordion-header {
+    background-color: #495057; /* Adjust as needed */
+  }
+  
+  .faq-bg-1 .accordion-body {
+    background-color: #343a40; /* Adjust as needed */
+    color: #ffffff;
+  }

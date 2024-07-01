@@ -1,5 +1,6 @@
 // import React from 'react'
 import "./NavBar.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import logo1 from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 

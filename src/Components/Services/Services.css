@@ -24,3 +24,7 @@
 .bord {
     border: 1px solid #FFDE00 !important;
 }
+
+.moda {
+    cursor: pointer !important;
+}
