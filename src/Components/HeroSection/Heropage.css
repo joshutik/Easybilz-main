@@ -12,7 +12,7 @@
     background-image: url(../assets/heroBg.png) !important;
     background-size: cover !important;
     background-position: center !important;
-    min-height: 112vh !important;
+    min-height: 100vh !important;
   }
 
   .hero-img {
