@@ -86,7 +86,7 @@ const Heropage = () => {
     <div>
       <section className="container-fluid hero-page pb-1">
         <div className="container pt-5">
-          <div className="row align-items-center min-vh-100 justify-content-center mt-5 pb-5">
+          <div className="row align-items-center min-vh-100 justify-content-center mt-5 pb-5 parent">
             <div className="col-lg-6 col-md-6 col-sm-12 text-center text-md-start">
               <h1 className="display-3 fw-bold">
                 Save.<span className="invest-1">Invest.</span>

@@ -207,7 +207,7 @@
 @media screen and (max-width: 768px) {
   
   .hero-page{
-    min-height: 110vh !important;
+    min-height: 100vh !important;
     padding-bottom: 5rem;
   }
     .who-card {
@@ -215,6 +215,12 @@
       width: 100% !important;
       padding:1rem;
         
+    }
+
+    .hero-img-1 {
+      width: 30rem !important;
+      height: 30rem;
+      margin-top: 3rem;
     }
 
     /* .hero-img {
@@ -243,6 +249,16 @@
       /* padding-bottom: 5rem; */
     }
 
+    .hero-img-1 {
+      width: 30rem !important;
+      height: 30rem;
+      margin-top: 3rem;
+    }
+
+    .parent {
+      margin-top: 5rem !important;
+    }
+
     /* .hero-img > img {
       width: 60% !important; 
       height: auto; 
@@ -250,3 +266,4 @@
     } */
 
   }
+

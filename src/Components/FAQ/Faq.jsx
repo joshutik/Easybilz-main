@@ -22,7 +22,7 @@ const Faq = () => {
           <BootstrapAccordion.Item eventKey="2">
             <BootstrapAccordion.Header>How can I join?</BootstrapAccordion.Header>
             <BootstrapAccordion.Body className='faq-bg text-light'>
-              You join by signing up the membership form and registering with a token (2k). Then, choose a saving plan you want to cultivate, invest plan, etc.
+              You join by signing up the membership form and registering with a token (₦2,000). Then, choose a saving plan you want to cultivate, invest plan, etc.
             </BootstrapAccordion.Body >
           </BootstrapAccordion.Item>
         </BootstrapAccordion>
