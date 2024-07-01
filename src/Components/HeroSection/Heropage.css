@@ -233,13 +233,10 @@
       height: auto;
        object-fit: cover;
     } */
-
-    hero
-    
-    .path-logo {
+    /* .path-logo {
       margin-top: 13rem;
       display: none;
-    }
+    } */
     
     
   }
@@ -257,6 +254,10 @@
 
     .parent {
       margin-top: 5rem !important;
+    }
+
+    .path-logo{
+      display: none !important;
     }
 
     /* .hero-img > img {
