@@ -84,9 +84,9 @@ import img2 from "../assets/hero parthern.png";
 const Heropage = () => {
   return (
     <div>
-      <section className="container-fluid hero-page pb-1">
+      <section className="container-fluid hero-page pb-0">
         <div className="container pt-5">
-          <div className="row align-items-center min-vh-100 justify-content-center mt-5 pb-5 parent">
+          <div className="row align-items-center min-vh-100 justify-content-center  mt-5 parent">
             <div className="col-lg-6 col-md-6 col-sm-12 text-center text-md-start">
               <h1 className="display-3 fw-bold">
                 Save.<span className="invest-1">Invest.</span>
@@ -103,13 +103,13 @@ const Heropage = () => {
                 </button>
               </div>
             </div>
-             <div className="col-lg-6 col-md-6 col-sm-12 hero-bg position-relative">
+             <div className="col-lg-6 col-md-6 col-sm-12 position-relative">
               <div className="hero-img mt-0">
                 <img src={img1} alt="lady with phone" className="img-fluid pt-5 mt-lg-5 hero-img-1 w-100" />
                 <img
                   src={img2}
                   alt="logo parthern"
-                  className="img-fluid path-logo position-absolute z-1 top-100 start-50 translate-middle-x"
+                  className="img-fluid path-logo position-absolute z-1 top-50 start-50 translate-middle-x"
                 />
               </div>
             </div> 
