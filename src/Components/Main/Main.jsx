@@ -4,9 +4,9 @@ import HeroSection from '../HeroSection/Heropage'
 import Services from "../Services/Services";
 import Review from '../Review/Review';
 import Faq from '../FAQ/Faq';
-// import ContactUs from '../ContactUs/Contact';
+import ContactUs from '../ContactUs/Contact';
 import CallToAction from '../CallToAction/Calltoaction';
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 
 const Main = () => {
   return (
@@ -16,9 +16,9 @@ const Main = () => {
         <Services/>
         <Review/>
         <Faq/>
-        {/* <ContactUs/> */}
+        <ContactUs/>
         <CallToAction/>
-        {/* <Footer/> */}
+        <Footer/>
     </div>
   )
 }

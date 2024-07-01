@@ -1,5 +1,7 @@
 
 import './App.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from "./Components/Main/Main";
 
 function App() {
@@ -11,4 +13,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
