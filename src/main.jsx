@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
@@ -13,6 +13,7 @@ import Heropage from './Components/HeroSection/Heropage'
 import LoginAccount from './Components/LoginAccount/LoginAcount'
 import Register from './Components/Registration/Register';
 import Main from './Components/Main/Main';
+import ExistingMemberPage from './Components/ExistingMemberPage/MembershipPage';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register/>,
+  },
+  {
+    path: "/membership-page",
+    element: <ExistingMemberPage/>,
   },
   {
     path: "/reg-payment",

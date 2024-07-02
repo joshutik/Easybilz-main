@@ -43,7 +43,7 @@ const Login = () => {
       localStorage.setItem("firstName", data.firstName);
       // localStorage.setItem("middleName", data.middleName);
       // localStorage.setItem("otherName", data.otherName);
-      navigate("/reg-payment");
+      navigate("/membership-page");
 
      
 

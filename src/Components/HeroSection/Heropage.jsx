@@ -106,12 +106,12 @@ const Heropage = () => {
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 position-relative">
               <div className="hero-img mt-0">
+                <CustomCarouselForHome/>
                 {/* <img
                   src={img1}
                   alt="lady with phone"
                   className="img-fluid pt-5 mt-lg-5 hero-img-1 w-100"
                 /> */}
-                <CustomCarouselForHome/>
                 <img
                   src={img2}
                   alt="logo parthern"

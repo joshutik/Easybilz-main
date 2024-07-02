@@ -6,7 +6,7 @@ import img1 from "../assets/footerLogo.png";
 const Footer = () => {
   return (
     <div className="container-fluid">
-      <div className="">
+      <div className="container">
         <div className="row mt-3 justify-content-center gy-3 py-3 ms-auto">
           <div className="col-lg-3 col-md-6 col-sm-12 ">
             <img src={img1} alt="logo" className="img-fluid w-50" />

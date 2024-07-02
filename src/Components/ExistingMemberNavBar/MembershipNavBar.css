@@ -1,0 +1,73 @@
+.nav,
+.btn-hero {
+    background-color: #10436B !important;
+}
+
+.btn-login {
+    color: #FFDE00 !important;
+    border: 2px solid #FFDE00 !important;
+}
+
+.navbar-toggler-icon {
+    color: white !important;
+}
+
+
+
+.nav-link:focus {
+    color: #FFDE00 !important;
+    border-bottom: 2px solid #FFDE00 !important;
+}
+
+.avater {
+    background-color: white !important;
+    border-radius: 50%;
+    background: #FFFFFF;
+    width: 10% !important;
+    height: 100% !important;
+}
+
+
+/* .circle {
+    width: 70% !important;
+    height: 101px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+} */
+.navbar .avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: white !important;
+}
+
+.navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    z-index: 1000;
+}
+
+.navbar .dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #033478;
+}
+
+.navbar .dropdown-item:hover {
+    color: #F11111 !important;
+}
+
+.text-small {
+    font-size: 0.75rem !important;
+}
+
+.bi-chevron-down {
+    margin-top: -1rem !important;
+    text-align: start;
+    color: #FFDE00 !important;
+}

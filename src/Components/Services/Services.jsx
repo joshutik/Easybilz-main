@@ -40,7 +40,7 @@ const Services = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card invest w-100 px-3 py-4 rounded-5">
+            <div className="card invest w-100 px-3 py-4 rounded-5 border-0 border-0">
               <div className=" mb-3 mx-auto">
                 <img src={img2} alt="" className="img-fluid" />
               </div>
@@ -58,7 +58,7 @@ const Services = () => {
             <InvestModal show={showInvestmentModal} handleClose={handleInvestmentClose} />
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card savings w-100 px-3 py-4 rounded-5">
+            <div className="card savings w-100 px-3 py-4 rounded-5 border-0">
               <div className="mb-3 mx-auto">
                 <img src={img3} alt="" className="img-fluid"/>
               </div>
@@ -76,7 +76,7 @@ const Services = () => {
             <SavingModal show={showSavingModal} handleClose={handleSavingClose} />
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card invest w-100 px-3 py-4 rounded-5">
+            <div className="card invest w-100 px-3 py-4 rounded-5 border-0">
               <div className=" mb-3 mx-auto">
                 <img src={img4} alt="" className="img-fluid"/>
               </div>
@@ -93,7 +93,7 @@ const Services = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card savings w-100 px-3 py-4 rounded-5">
+            <div className="card savings w-100 px-3 py-4 rounded-5 border-0">
               <div className=" mb-3 mx-auto">
                 <img src={img5} alt="img-fluid" />
               </div>
@@ -111,7 +111,7 @@ const Services = () => {
             <BusinessMgtModal show={showMgtModal} handleClose={handleMgtClose} />
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card bg-light w-100 px-3 py-4 rounded-5">
+            <div className="card bg-light w-100 px-3 py-4 rounded-5 border-0">
               <div className="mb-3 mx-auto">
                 <img src={img6} alt="" className="img-fluid" />
               </div>

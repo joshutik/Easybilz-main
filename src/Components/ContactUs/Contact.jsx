@@ -113,7 +113,7 @@ const Contact = () => {
                   ></textarea>
                   <button
                     type="submit"
-                    className="btn rounded-pill px-4 mt-3 position-absolute bottom-0 end-0 send"
+                    className="btn rounded-pill px-4 mt-3 position-absolute bottom-0 end-0 send border-0"
                   >
                     Send Message
                   </button>
