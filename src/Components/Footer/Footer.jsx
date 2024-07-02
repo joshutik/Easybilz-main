@@ -8,8 +8,11 @@ const Footer = () => {
     <div className="container-fluid">
       <div className="">
         <div className="row mt-3 justify-content-center gy-3 py-3 ms-auto">
-          <div className="col-lg-3 col-md-6 col-sm-12">
+          <div className="col-lg-3 col-md-6 col-sm-12 ">
             <img src={img1} alt="logo" className="img-fluid w-50" />
+            <p className="text-start w-50 ms-lg-5">
+              57 Woji Road,<br/>GRA phase 2 Port Harcourt.
+              </p>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
             <h5 className="text-decoration-underline ms-lg-5">Quick Links</h5>
@@ -35,17 +38,27 @@ const Footer = () => {
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
             <div className="ms-md-3 ms-lg-5">
-            <h5 className="text-decoration-underline">Legal</h5>
-              <a href="#" className="terms text-decoration-none">Terms and conditions</a>
+              <h5 className="text-decoration-underline">Legal</h5>
+              <a href="#" className="terms text-decoration-none">
+                Terms and conditions
+              </a>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
             <h5 className="text-decoration-underline">Social</h5>
             <div>
-              <a href="#"><i className="bi bi-facebook fs-4 "></i></a>
-              <a href="#"><i className="bi bi-twitter fs-4 ms-2"></i></a>
-              <a href="#"><i className="bi bi-instagram fs-4 ms-2"></i></a>
-              <a href="#"><i className="bi bi-linkedin fs-4 ms-2"></i></a>
+              <a href="#">
+                <i className="bi bi-facebook fs-4 "></i>
+              </a>
+              <a href="#">
+                <i className="bi bi-twitter fs-4 ms-2"></i>
+              </a>
+              <a href="#">
+                <i className="bi bi-instagram fs-4 ms-2"></i>
+              </a>
+              <a href="#">
+                <i className="bi bi-linkedin fs-4 ms-2"></i>
+              </a>
             </div>
           </div>
         </div>
