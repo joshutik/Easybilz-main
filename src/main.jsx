@@ -14,6 +14,7 @@ import LoginAccount from './Components/LoginAccount/LoginAcount'
 import Register from './Components/Registration/Register';
 import Main from './Components/Main/Main';
 import ExistingMemberPage from './Components/ExistingMemberPage/MembershipPage';
+import MemberAccount from './Components/MemberAccount/MemberAccount';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/homepage",
     element: <Main/>,
+  },
+  {
+    path: "/profile",
+    element: <MemberAccount/>,
   },
 ]);
 

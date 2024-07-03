@@ -1,0 +1,19 @@
+.payment-card-2 {
+    background:
+    linear-gradient(180deg, #1C74BB 0%, #0D3555 100%);
+    
+}
+
+.add-fund {
+    outline: 2px solid #FFDE00 !important;
+    color: #FFDE00 !important;
+}
+
+.vr {
+    color: #FFDE00;
+}
+
+.complete {
+    color:rgba(16, 67, 107, 1) !important ;
+    outline: 2px solid rgba(16, 67, 107, 1);
+}

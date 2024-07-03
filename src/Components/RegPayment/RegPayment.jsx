@@ -44,19 +44,66 @@ const RegPayment = () => {
     return `${prefix}${randomNumber}${suffix}`;
   };
 
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   if (selectedFile) {
+
+  //     const authToken = localStorage.getItem('authtoken'); // Get the auth token from local storage
+  //     const user = localStorage.getItem('user'); // Get the auth token from local storage
+   
+  //     const formData = new FormData();
+  //     formData.append('user', user);
+  //     formData.append('upload', selectedFile);
+  //     formData.append('receipt_number', generateReceiptNumber());
+  //     formData.append('details', "Test Receipt do not process");
+
+  //     // console.log("selectedFile", selectedFile);
+     
+  //     try {
+  //       const response = await fetch(`${apiHostname}/payment/api/receipts/`, {
+        
+  //         method: 'POST',
+  //         body: formData,
+  //         headers: {
+  //           'Authorization': `Bearer ${authToken}`, // Include the Authorization header
+  //         },
+  //         credentials: 'include', // This is to include cookies if your backend needs it for authentication
+  //       });
+
+  //       if (response.ok) {
+  //         const result = await response.json();
+  //         setMessage('Receipt uploaded successfully!');
+  //         console.log('Success:', result);
+
+  //         setTimeout(() => {
+  //           navigate("/heropage");
+  //         }, 3000); // Wait for 3 seconds before navigating
+
+  //       } else {
+  //         setMessage('Failed to upload receipt.');
+  //         console.log('Upload failed:', response.statusText);
+  //       }
+  //     } catch (error) {
+  //       setMessage('An error occurred while uploading the receipt.');
+  //       console.error('Error:', error);
+  //     }
+  //   } else {
+  //     setMessage('No file selected');
+  //   }
+  // };
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (selectedFile) {
-
-      const authToken = localStorage.getItem('authtoken'); // Get the auth token from local storage
+  
+      const _authToken = localStorage.getItem('authtoken'); // Get the auth token from local storage
       const user = localStorage.getItem('user'); // Get the auth token from local storage
-   
+     
       const formData = new FormData();
       formData.append('user', user);
       formData.append('upload', selectedFile);
       formData.append('receipt_number', generateReceiptNumber());
       formData.append('details', "Test Receipt do not process");
-
+  
       // console.log("selectedFile", selectedFile);
      
       try {
@@ -65,20 +112,20 @@ const RegPayment = () => {
           method: 'POST',
           body: formData,
           headers: {
-            'Authorization': `Bearer ${authToken}`, // Include the Authorization header
+            'Authorization': `Bearer ${_authToken}`, // Include the Authorization header
           },
           credentials: 'include', // This is to include cookies if your backend needs it for authentication
         });
-
+  
         if (response.ok) {
           const result = await response.json();
           setMessage('Receipt uploaded successfully!');
           console.log('Success:', result);
-
+  
           setTimeout(() => {
             navigate("/heropage");
           }, 3000); // Wait for 3 seconds before navigating
-
+  
         } else {
           setMessage('Failed to upload receipt.');
           console.log('Upload failed:', response.statusText);

@@ -58,7 +58,7 @@
     color: #033478;
 }
 
-.navbar .dropdown-item:hover {
+.navbar .log .dropdown-item:hover {
     color: #F11111 !important;
 }
 

@@ -15,7 +15,7 @@ const Main = () => {
         <HeroSection/>
         <Services/>
         <Review/>
-        <Faq/>
+        <Faq/>    
         <ContactUs/>
         <CallToAction/>
         <Footer/>

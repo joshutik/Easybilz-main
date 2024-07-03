@@ -1,0 +1,9 @@
+.text-small {
+    font-size: 0.75rem !important;
+}
+
+.bi-chevron-down {
+    margin-top: -1rem !important;
+    text-align: start;
+    color: #FFDE00 !important;
+}
