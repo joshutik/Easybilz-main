@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-
+  
     try {
       const response = await fetch(`${apiHostname}/user/login/`, {
         method: "POST",
@@ -29,24 +29,19 @@ const Login = () => {
         },
         body: JSON.stringify({ email, password, remember_me: rememberMe }),
       });
-
+  
       if (!response.ok) {
         throw new Error("Authentication failed");
       }
-
+  
       const data = await response.json();
-
-      // Handle successful login, e.g., set user session/token
-      // console.log("Login successful:", data);
+  
+      // Handle successful login
       localStorage.setItem("authtoken", data.access_token);
       localStorage.setItem("user", data.user_id);
       localStorage.setItem("firstName", data.firstName);
-      // localStorage.setItem("middleName", data.middleName);
-      // localStorage.setItem("otherName", data.otherName);
+  
       navigate("/membership-page");
-
-     
-
     } catch (err) {
       setError("Invalid email or password. Please try again.");
       console.error("Login error:", err);
