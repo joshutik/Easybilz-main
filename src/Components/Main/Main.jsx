@@ -11,14 +11,36 @@ import Footer from '../Footer/Footer';
 const Main = () => {
   return (
     <div>
-        <NavigationBar/>
+        {/* <NavigationBar/>
         <HeroSection/>
         <Services/>
         <Review/>
         <Faq/>    
         <ContactUs/>
         <CallToAction/>
-        <Footer/>
+        <Footer/> */}
+        <div>
+      <NavigationBar />
+      <div id="aboutUs">
+        <HeroSection />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="review">
+        <Review />
+      </div>
+      <div id="faq">
+        <Faq />
+      </div>
+      <div id="contact">
+        <ContactUs />
+      </div>
+      <div id="calltoaction">
+        <CallToAction />
+      </div>
+      <Footer />
+      </div>
     </div>
   )
 }

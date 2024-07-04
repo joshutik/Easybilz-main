@@ -58,4 +58,8 @@
     .fogot, .register {
         color: white !important;
     }
+    
+    .tp-pattern {
+        display: none !important;
+    }
 }

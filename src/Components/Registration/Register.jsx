@@ -99,7 +99,7 @@ const Register = () => {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 px-0">
             <div className="tp-pattern">
-              <img src={topPattern} alt="top pattern" className="img-fluid" />
+              <img src={topPattern} alt="top pattern" className="img-fluid top-p" />
             </div>
             <div className="container my-5">
               <p className="ms-5">Hello there😊,</p>

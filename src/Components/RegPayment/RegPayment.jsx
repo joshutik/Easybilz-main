@@ -123,7 +123,7 @@ const RegPayment = () => {
           console.log('Success:', result);
   
           setTimeout(() => {
-            navigate("/heropage");
+            navigate("/homepage");
           }, 3000); // Wait for 3 seconds before navigating
   
         } else {
