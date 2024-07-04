@@ -57,7 +57,13 @@ const Register = () => {
       }
 
       const data = await response.json();
-      console.log('Registration successful:', data);
+      console.log('Registration successful:');
+
+    // Handle successful login
+    localStorage.setItem("authtoken", data.access_token);
+    localStorage.setItem("user", data.user_id);
+    localStorage.setItem("firstName", data.firstName);
+
       navigate('/reg-payment');
 
       // Redirect or update state to show user is registered
