@@ -5,7 +5,7 @@ import './FundModal.css'; // Create a separate CSS file for the modal styles
 const FundModal = ({ show, handleClose }) => {
   return (
     <div className={`modal ${show ? 'show' : ''}`} onClick={handleClose}>
-      <div className="modal-content" onClick={e => e.stopPropagation()}>
+      <div className="modal-content-funds" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
           <button type="button" className="close ms-auto" onClick={handleClose}>
             &times;

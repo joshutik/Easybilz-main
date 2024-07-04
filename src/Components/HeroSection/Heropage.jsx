@@ -80,6 +80,7 @@ import "./Heropage.css";
 // import img1 from "../assets/hero-psge-2.png";
 import img2 from "../assets/hero parthern.png";
 import CustomCarouselForHome from "../CarouselHomePage/CustomCarouselForHome";
+import { Link } from "react-router-dom";
 // import img3 from "../assets/TransLogo.png";
 
 const Heropage = () => {
@@ -99,9 +100,9 @@ const Heropage = () => {
                 finances easily and effectively.
               </p>
               <div>
-                <button className="btn btn-hero px-5 py-2 text-light rounded-pill">
+                <Link to={"/register"} className="btn btn-hero px-5 py-2 text-light rounded-pill">
                   Get Started
-                </button>
+                </Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 position-relative">

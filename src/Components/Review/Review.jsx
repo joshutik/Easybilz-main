@@ -1,4 +1,5 @@
 import Ratio from "react-bootstrap/Ratio";
+import { Link } from "react-router-dom";
 
 const Review = () => {
   return (
@@ -7,7 +8,7 @@ const Review = () => {
         <h2 className="fw-bold">Member’s Review</h2>
         <p>
           We are 100% trustworthy that’s why our members only have great things
-          to say about us. <a href="#">Join us</a> today and secure your future through our
+          to say about us. <Link to={"/register"} href="#">Join us</Link> today and secure your future through our
           savings and investment feature.
         </p>
       </div>

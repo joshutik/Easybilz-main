@@ -1,0 +1,13 @@
+.bg-reg {
+    background-color: color #10436B !important;
+}
+.bg-subtle {
+background-color: rgb(238, 235, 235);
+}
+
+@media screen and (max-width:767px) {
+    .bg-reg {
+        background-color: color #10436B !important;
+    }  
+}
+

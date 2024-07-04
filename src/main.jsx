@@ -15,6 +15,7 @@ import Register from './Components/Registration/Register';
 import Main from './Components/Main/Main';
 import ExistingMemberPage from './Components/ExistingMemberPage/MembershipPage';
 import MemberAccount from './Components/MemberAccount/MemberAccount';
+import MemberRegistration from './Components/MemberRegistration/MemberRegistration';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/logout",
-    element: <Login/>,
+    element: <Main/>,
   },
   {
     path: "/heropage",
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <MemberAccount/>,
+  },
+  {
+    path: "/member-registration-form",
+    element: <MemberRegistration/>,
   },
 ]);
 
