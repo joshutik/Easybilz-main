@@ -12,11 +12,18 @@ import RegPayment from './Components/RegPayment/RegPayment'
 import Heropage from './Components/HeroSection/Heropage'
 import LoginAccount from './Components/LoginAccount/LoginAcount'
 import Register from './Components/Registration/Register';
+
+import Contact from './Components/ContactUs/Contact';
+
 import Main from './Components/Main/Main';
 import ExistingMemberPage from './Components/ExistingMemberPage/MembershipPage';
 import MemberAccount from './Components/MemberAccount/MemberAccount';
 
 const router = createBrowserRouter([
+  {
+    path: "/contactUs",
+    element: <Contact/>,
+  },
   {
     path: "/",
     element: <App/>,
