@@ -17,29 +17,29 @@ function ResponsiveTable() {
     <tbody>
       <tr>
         <td>01/01/2024</td>
-        <td>Payment for services</td>
-        <td>₦10,000 NGN</td>
-        <td>₦0 NGN</td>
-        <td>Deposit</td>
-        <td>1234567890</td>
+        <td>xxxxxxxx xxxxxxxx</td>
+        <td>₦xx,xxx</td>
+        <td>₦xxxxxxxx</td>
+        <td>xxxxxxxx</td>
+        <td>123xxxxxxxx0</td>
         <td>Completed</td>
       </tr>
       <tr>
         <td>02/01/2024</td>
-        <td>Withdrawal</td>
-        <td>₦0 NGN</td>
-        <td>₦5,000 NGN</td>
-        <td>Withdrawal</td>
-        <td>1234567890</td>
+        <td>xxxxxxxx</td>
+        <td>₦xxxxxxxx</td>
+        <td>₦xx,xxxxxx</td>
+        <td>xxxxxxxx</td>
+        <td>123xxxxxxxx0</td>
         <td>Completed</td>
       </tr>
       <tr>
         <td>03/01/2024</td>
-        <td>Transfer to savings</td>
-        <td>₦2,000 NGN</td>
-        <td>₦0 NGN</td>
-        <td>Transfer</td>
-        <td>1234567890</td>
+        <td>xxxxxxxx</td>
+        <td>₦xxxxxxxx</td>
+        <td>₦xxxxxxxx</td>
+        <td>xxxxxxxx</td>
+        <td>123xxxxxxxx0</td>
         <td>Pending</td>
       </tr>
     </tbody>

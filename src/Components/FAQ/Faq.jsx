@@ -8,7 +8,7 @@ const Faq = () => {
         <h2 className='text-center  my-4 bg-none'>Frequently Asked Questions</h2>
         <BootstrapAccordion defaultActiveKey="0" className='faq-bg-1'>
           <BootstrapAccordion.Item eventKey="0">
-            <BootstrapAccordion.Header className='bg'>Is Easy-billz Cooperative approved?</BootstrapAccordion.Header>
+            <BootstrapAccordion.Header className='bg '>Is Easy-billz Cooperative approved?</BootstrapAccordion.Header>
             <BootstrapAccordion.Body  className='faq-bg text-light'>
               We are a registered cooperative - easy-bills multipurpose cooperative society Ltd with registration number: RS 35119. To further enhance our effective commitment to our members and non-membership participation, we are in partnership with a microfinance bank.
             </BootstrapAccordion.Body>
