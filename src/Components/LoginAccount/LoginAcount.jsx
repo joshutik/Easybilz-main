@@ -66,7 +66,7 @@ const Register = () => {
                     </p>
                   </div>
                   <div className="container my-5 text-center">
-                    <Link to={'/login-account'}
+                    <Link to={'/membership-page'}
                       type="submit"
                       className="bg btn btn-primary border-0 login-btn rounded-5 px-5 fw-bold register-btn"
                     >
