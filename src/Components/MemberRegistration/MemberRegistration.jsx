@@ -1,23 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MemberRegistration.css';
+import { API_BASE_URL } from '../../config';
 
 const MemberRegistration = () => {
+  const apiHostname = API_BASE_URL;
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     fname: '',
     surname: '',
-    maritalStatus: '',
+    maritalStatus: 'Single', // Default value
     stateOfOrigin: '',
-    nationality: '',
-    gender: '',
+    nationality: 'Nigerian', // Default value
+    gender: 'Male', // Default value
     motherName: '',
     residenceAddress: '',
     town: '',
     email: '',
     mobileNumber: '',
-    identity: '',
+    identity: 'National ID', // Default value
     identityNumber: '',
-    employmentStatus: '',
+    employmentStatus: 'Salaried', // Default value
     annualSalary: '',
     businessName: '',
     state: '',
@@ -37,7 +41,6 @@ const MemberRegistration = () => {
   });
 
   const [isProfileComplete, setIsProfileComplete] = useState(false);
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -46,9 +49,19 @@ const MemberRegistration = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    //console.log(formData);
+    const userID = localStorage.getItem('userID'); // Fetching userID from local storage
+
+    if (!userID) {
+      console.error('User ID not found in local storage');
+      return;
+    }
+
+    // Alert something before sending the PATCH request
+
     try {
-      const response = await fetch('YOUR_BACKEND_API_URL', {
-        method: 'POST',
+      const response = await fetch(`${apiHostname}/user/create/${userID}/`, {
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -56,8 +69,7 @@ const MemberRegistration = () => {
       });
 
       if (response.ok) {
-        setIsProfileComplete(true);
-        navigate('/profile'); // Redirect to dashboard or any other page
+        navigate('/profile'); // Redirect to profile or any other page
       } else {
         console.error('Profile submission failed');
       }
@@ -66,6 +78,20 @@ const MemberRegistration = () => {
     }
   };
 
+  // Function to check if all required fields are filled
+  const checkFormCompletion = () => {
+    for (const key in formData) {
+      if (formData[key] === '') {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  // Update isProfileComplete whenever formData changes
+  useEffect(() => {
+    setIsProfileComplete(checkFormCompletion());
+  }, [formData]);
   return (
     <div className="container-fluid bg-subtle">
       <div className="row justify-content-center py-5">
@@ -128,7 +154,7 @@ const MemberRegistration = () => {
                       value={formData.stateOfOrigin}
                       onChange={handleChange}
                       required
-                    />
+                     />
                   </div>
                 </div>
                 <div className="container-fluid">
@@ -169,7 +195,7 @@ const MemberRegistration = () => {
                         <input
                           type="text"
                           className="form-control border-dark rounded-5 my-2"
-                          id="motherName"
+                          id="motherName"  
                           value={formData.motherName}
                           onChange={handleChange}
                           required
@@ -260,12 +286,12 @@ const MemberRegistration = () => {
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
                     <label htmlFor="identityNumber">Id Number</label>
-                     <input type='number' className="form-control border-dark rounded-5 my-3"
+                     <input type='text' className="form-control border-dark rounded-5 my-3"
+                      id="identityNumber"
                       value={formData.identityNumber}
                       onChange={handleChange}
                       required
                     />
-                    
                   </div>
                 </div>
               </div>
@@ -500,7 +526,7 @@ const MemberRegistration = () => {
                   <div className="form-group my-3">
                     <label htmlFor="accountNumber">Account Number</label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control border-dark rounded-5 my-3"
                       id="accountNumber"
                       value={formData.accountNumber}
@@ -518,7 +544,7 @@ const MemberRegistration = () => {
                 <button
                   type="submit"
                   className="btn bg-reg w-75 btn-dark rounded-5 my-3 border-0"
-                  disabled={!isProfileComplete}
+                  // disabled={!isProfileComplete}
                 >
                   Save
                 </button>

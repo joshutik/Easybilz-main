@@ -6,6 +6,7 @@ import bottomPattern from "../assets/Patterns.png";
 import logo from "../assets/Logo.png";
 import { TailSpin } from "react-loader-spinner";
 import {Link, useNavigate } from "react-router-dom";
+import { API_BASE_URL } from '../../config';
 
 
 const Register = () => {
@@ -18,9 +19,10 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  
 
-  const apiHostname = import.meta.env.VITE_API_HOSTNAME || 'https://easybilz-api.onrender.com';
-  // const apiHostname = import.meta.env.VITE_API_HOSTNAME || 'http://127.0.0.1:9090';
+
+  const apiHostname = API_BASE_URL;
 
 
   const handleSubmit = async (event) => {
@@ -57,6 +59,12 @@ const Register = () => {
       }
 
       const data = await response.json();
+
+       // Handle successful login
+       localStorage.setItem("authtoken", data.access_token);
+       localStorage.setItem("userID", data.user_id);
+       localStorage.setItem("firstName", data.firstName);
+
       console.log('Registration successful:');
 
     // Handle successful login
