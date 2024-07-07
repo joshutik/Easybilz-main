@@ -49,7 +49,7 @@ const MemberRegistration = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    //console.log(formData);
     const userID = localStorage.getItem('userID'); // Fetching userID from local storage
 
     if (!userID) {
