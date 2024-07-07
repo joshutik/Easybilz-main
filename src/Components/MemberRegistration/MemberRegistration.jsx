@@ -68,9 +68,10 @@ const MemberRegistration = () => {
 
   return (
     <div className="container-fluid bg-subtle">
-      <div className="row justify-content-center">
+      <div className="row justify-content-center py-5">
+      <h2 className='text-center py-4'>Complete Your Profile</h2>
         <div className="col-lg-8 col-md-6 col-sm-12 px-0">
-          <form onSubmit={handleSubmit} className='bg-light px-4'>
+          <form onSubmit={handleSubmit} className='bg-light px-4 py-5 rounded'>
             {/* Personal Details */}
             <h5 className="fw-bold">Personal Details</h5>
             <div className="mx-auto">
@@ -282,7 +283,7 @@ const MemberRegistration = () => {
                       onChange={handleChange}
                       required
                     >
-                      <option value="Salaried">Salaried</option>
+                      <option value="Salary">Salary</option>
                       <option value="Self Employed">Self Employed</option>
                       <option value="Unemployed">Unemployed</option>
                     </select>

@@ -42,11 +42,6 @@ const Register = () => {
             <div className="tp-pattern">
               <img src={topPattern} alt="top pattern" className="img-fluid" />
             </div>
-            <div className="container my-5">
-              <Link to={'/reg-payment'} className="ms-5 text-decoration-none">
-                <i className="bi bi-chevron-left"></i> Go back
-              </Link>
-            </div>
             <h2 className="fw-bold text-center">Register</h2>
             <div className="w-75 mx-auto">
               <div className="row">
@@ -66,7 +61,7 @@ const Register = () => {
                     </p>
                   </div>
                   <div className="container my-5 text-center">
-                    <Link to={'/membership-page'}
+                    <Link to={'/profile'}
                       type="submit"
                       className="bg btn btn-primary border-0 login-btn rounded-5 px-5 fw-bold register-btn"
                     >

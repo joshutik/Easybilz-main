@@ -114,7 +114,7 @@ const MembershipNavbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg fixed-top nav py-3">
         <div className="container">
-          <Link to={"/homepage"}>
+          <Link to={"/membership-page"}>
             <img
               src={logo1}
               alt="EasyBilz-logo"

@@ -183,7 +183,7 @@ const RegPayment = () => {
                       <hr className="hori-line" />
                       <div className="card-body">
                         <p>
-                          Bank: <span className="pay-card">Stailing Bank</span>
+                          Bank: <span className="pay-card">Sterling Bank</span>
                           <br />
                           Account Number:{" "}
                           <span className="pay-card">0098737021</span>
