@@ -4,10 +4,11 @@ import logo from "../assets/Logo.png";
 import topPattern from "../assets/upPattern.png";
 import bottomPattern from "../assets/Patterns.png";
 import { Link, useNavigate } from "react-router-dom";
+import { API_BASE_URL } from '../../config';
 
 const RegPayment = () => {
-  const apiHostname = import.meta.env.VITE_API_HOSTNAME || 'https://easybilz-api.onrender.com';
-  //const apiHostname = import.meta.env.VITE_API_HOSTNAME || 'http://127.0.0.1:9090';
+const apiHostname = API_BASE_URL;
+
 
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -96,7 +97,7 @@ const RegPayment = () => {
     if (selectedFile) {
   
       const _authToken = localStorage.getItem('authtoken'); // Get the auth token from local storage
-      const user = localStorage.getItem('user'); // Get the auth token from local storage
+      const user = localStorage.getItem('userID'); // Get the auth token from local storage
      
       const formData = new FormData();
       formData.append('user', user);
