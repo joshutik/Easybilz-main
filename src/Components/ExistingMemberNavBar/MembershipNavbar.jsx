@@ -253,7 +253,7 @@ const MembershipNavbar = () => {
                   className="img-fluid avatar ms-lg-auto"
                 />
                 <div className="d-block text-light px-1">
-                  <span className="d-block main-name py-0 fw-bold">{userName}</span>
+                  <span className="d-block main-name py-0 fw-bold text-center">{userName}</span>
                   <span className="d-block text-small me-2 m-0">Active member</span>
                 </div>
                 <i
@@ -263,9 +263,9 @@ const MembershipNavbar = () => {
                 ></i>
               </div>
               {showDropdown && (
-                <div className="dropdown-menu dropdown-menu-end show">
-                  <Link className="dropdown-item bg-secondary my-2 fw-bold" to="/profile"><i className="bi bi-person-circle"> </i>My Account</Link>
-                  <Link className="dropdown-item bg-secondary fw-bold log" to="/logout"><i className="bi bi-box-arrow-left"> </i>Logout</Link>
+                <div className="dropdown-menu dropdown-menu-end show rounded-4">
+                  <Link className="dropdown-item  my-2 fw-bold" to="/profile"><i className="bi bi-person-circle"> </i>My Account</Link>
+                  <Link className="dropdown-item text-danger fw-bold log" to="/logout"><i className="bi bi-box-arrow-left"> </i>Logout</Link>
                 </div>
               )}
             </div>

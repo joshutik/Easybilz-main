@@ -30,12 +30,12 @@ background-color: #94cdfb !important;
   
   .faq-bg-1 .accordion-button:not(.collapsed) {
     background-color: #007bff; /* Adjust as needed */
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
   .faq-bg-1 .accordion-button {
     background-color: #6c757d; /* Adjust as needed */
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
   .text-center {
@@ -49,4 +49,12 @@ background-color: #94cdfb !important;
   .faq-bg-1 .accordion-body {
     background-color: #343a40; /* Adjust as needed */
     color: #ffffff;
+  }
+
+  .accordion-button {
+    color: white !important;
+  }
+
+  .accordion-header {
+    color: white !important;
   }
