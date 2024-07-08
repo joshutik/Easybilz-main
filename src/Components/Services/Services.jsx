@@ -32,7 +32,7 @@ const Services = () => {
         <div className="row gy-3 py-5">
           <div className="col-md-4 col-md-4 col-sm-12">
             <div className="d-flex">
-              <h2 className="w-75">Wed help you</h2>
+              <h2 className="w-75">We&apos;d help you</h2>
              <div className="border border-bottom-0 border-start-0 border-end-0 border-top-5 w-50 h-0 my-4 border-primary bord"></div>
             </div>
             <div>

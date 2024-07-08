@@ -42,7 +42,7 @@ const Login = () => {
       localStorage.setItem("userID", data.user_id);
       localStorage.setItem("firstName", data.firstName);
   
-      navigate("/membership-page");
+      navigate("/profile");
     } catch (err) {
       setError("Invalid email or password. Please try again.");
       console.error("Login error:", err);

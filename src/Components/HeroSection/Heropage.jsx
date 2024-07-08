@@ -136,7 +136,7 @@ const Heropage = () => {
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12 mt-lg-5 text-center text-md-start">
                 <p className="text-start">
-                  Easy-bills multipurpose cooperative society Ltd (Eazybillz
+                  Easybillz multipurpose cooperative society Ltd (Eazybillz
                   co-op) is a savings, credit and investments cooporative
                   society with a multipurpose operations tailored to promote the
                   economic interests of her members. Our primary objective is to

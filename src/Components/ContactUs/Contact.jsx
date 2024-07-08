@@ -51,7 +51,7 @@ const Contact = () => {
           <div className="col-lg-6 col-md-6 col-sm-12">
             <div>
               <i className="bi bi-geo-alt-fill fs-4"></i> 57 Woji Road, GRA
-              phase 3 Port Harcourt.
+              phase 2 Port Harcourt.
             </div>
 
             <div>

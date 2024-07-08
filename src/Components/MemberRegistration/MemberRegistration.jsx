@@ -36,6 +36,7 @@ const MemberRegistration = () => {
     nextOfKinEmail: '',
     nextOfKinTown: '',
     nextOfKinState: '',
+    bankName: '',
     accountName: '',
     accountNumber: ''
   });
@@ -357,6 +358,19 @@ const MemberRegistration = () => {
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
+                    <div className="form-group my-3">
+                      <label htmlFor="town">Town/City</label>
+                      <input
+                        type="text"
+                        className="form-control border-dark rounded-5 my-3"
+                        id="town"
+                        value={formData.town}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                  </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
                     <label htmlFor="officePhoneNumber">Office Phone Number</label>
                     <input
@@ -509,6 +523,19 @@ const MemberRegistration = () => {
               {/* Bank Details */}
               <h5>Bank Details</h5>
               <div className="row">
+              <div className="col-lg-12 col-md-6 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="accountNumber">Bank Name</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="accountNumber"
+                      value={formData.bankName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
                     <label htmlFor="accountName">Account Name</label>
@@ -526,7 +553,7 @@ const MemberRegistration = () => {
                   <div className="form-group my-3">
                     <label htmlFor="accountNumber">Account Number</label>
                     <input
-                      type="text"
+                      type="Number"
                       className="form-control border-dark rounded-5 my-3"
                       id="accountNumber"
                       value={formData.accountNumber}
