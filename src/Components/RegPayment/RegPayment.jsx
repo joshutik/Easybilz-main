@@ -7,16 +7,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { API_BASE_URL } from '../../config';
 
 const RegPayment = () => {
-const apiHostname = API_BASE_URL;
-
-
+  const apiHostname = API_BASE_URL;
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // New state for loader
   const navigate = useNavigate();
 
   const authToken = localStorage.getItem('authtoken'); // Get the auth token from local storage
-  // console.log("authToken", authToken);
+  const first_name = localStorage.getItem('firstName'); // Get the auth token from local storage
+  const last_name = localStorage.getItem('lastName'); // Get the auth token from local storage
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -45,71 +45,21 @@ const apiHostname = API_BASE_URL;
     return `${prefix}${randomNumber}${suffix}`;
   };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   if (selectedFile) {
-
-  //     const authToken = localStorage.getItem('authtoken'); // Get the auth token from local storage
-  //     const user = localStorage.getItem('user'); // Get the auth token from local storage
-   
-  //     const formData = new FormData();
-  //     formData.append('user', user);
-  //     formData.append('upload', selectedFile);
-  //     formData.append('receipt_number', generateReceiptNumber());
-  //     formData.append('details', "Test Receipt do not process");
-
-  //     // console.log("selectedFile", selectedFile);
-     
-  //     try {
-  //       const response = await fetch(`${apiHostname}/payment/api/receipts/`, {
-        
-  //         method: 'POST',
-  //         body: formData,
-  //         headers: {
-  //           'Authorization': `Bearer ${authToken}`, // Include the Authorization header
-  //         },
-  //         credentials: 'include', // This is to include cookies if your backend needs it for authentication
-  //       });
-
-  //       if (response.ok) {
-  //         const result = await response.json();
-  //         setMessage('Receipt uploaded successfully!');
-  //         console.log('Success:', result);
-
-  //         setTimeout(() => {
-  //           navigate("/heropage");
-  //         }, 3000); // Wait for 3 seconds before navigating
-
-  //       } else {
-  //         setMessage('Failed to upload receipt.');
-  //         console.log('Upload failed:', response.statusText);
-  //       }
-  //     } catch (error) {
-  //       setMessage('An error occurred while uploading the receipt.');
-  //       console.error('Error:', error);
-  //     }
-  //   } else {
-  //     setMessage('No file selected');
-  //   }
-  // };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (selectedFile) {
-  
+    if (selectedFile && !isLoading) { // Prevent multiple submissions
+      setIsLoading(true); // Start loader
       const _authToken = localStorage.getItem('authtoken'); // Get the auth token from local storage
       const user = localStorage.getItem('userID'); // Get the auth token from local storage
-     
+
       const formData = new FormData();
       formData.append('user', user);
       formData.append('upload', selectedFile);
       formData.append('receipt_number', generateReceiptNumber());
       formData.append('details', "Test Receipt do not process");
-  
-      // console.log("selectedFile", selectedFile);
-     
+
       try {
         const response = await fetch(`${apiHostname}/payment/api/receipts/`, {
-        
           method: 'POST',
           body: formData,
           headers: {
@@ -117,16 +67,16 @@ const apiHostname = API_BASE_URL;
           },
           credentials: 'include', // This is to include cookies if your backend needs it for authentication
         });
-  
+
         if (response.ok) {
           const result = await response.json();
           setMessage('Receipt uploaded successfully!');
           console.log('Success:', result);
-  
+
           setTimeout(() => {
             navigate("/login-account");
           }, 3000); // Wait for 3 seconds before navigating
-  
+
         } else {
           setMessage('Failed to upload receipt.');
           console.log('Upload failed:', response.statusText);
@@ -134,6 +84,8 @@ const apiHostname = API_BASE_URL;
       } catch (error) {
         setMessage('An error occurred while uploading the receipt.');
         console.error('Error:', error);
+      } finally {
+        setIsLoading(false); // Stop loader
       }
     } else {
       setMessage('No file selected');
@@ -147,15 +99,15 @@ const apiHostname = API_BASE_URL;
           <div className="container-fluid col-md-6 col-sm-12">
             <div className="container text-light mt-5">
               <div className="position-absolute top-0 bottom-0 mt-4 ms-auto ms-lg-5">
-              <Link to={'/homepage'}>
-                    <img
-                      src={logo}
-                      alt="EasyBilz"
-                      width="170"
-                      height="100"
-                      className="img-fluid"
-                    />
-                  </Link>
+                <Link to={'/homepage'}>
+                  <img
+                    src={logo}
+                    alt="EasyBilz"
+                    width="170"
+                    height="100"
+                    className="img-fluid"
+                  />
+                </Link>
               </div>
               <p className="fs-3 px-4 pt-5 mt-5">
                 Freedom starts with financial security. Grow yours today.
@@ -201,7 +153,7 @@ const apiHostname = API_BASE_URL;
 
                 <div className="col-lg-12 col-md-12 col-sm-12">
                   <div className="container-fluid fs-5 mt-5">
-                    <div 
+                    <div
                       className={`file-upload-container card rounded-5 upload-card py-5 file-upload-form ${
                         isDragging ? "dragging" : ""
                       }`}
@@ -227,8 +179,9 @@ const apiHostname = API_BASE_URL;
                       <button
                         type="submit"
                         className="btn btn-primary w-100 rounded-5 fs-4"
+                        disabled={isLoading} // Disable button when loading
                       >
-                        Submit
+                        {isLoading ? "Submitting..." : "Submit"} {/* Show loader text */}
                       </button>
                       {message && <p className="mt-3">{message}</p>}
                     </div>
