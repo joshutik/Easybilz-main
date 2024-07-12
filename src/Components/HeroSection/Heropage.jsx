@@ -125,7 +125,7 @@ const Heropage = () => {
       </section>
       <section>
         <div className="container-fluid w-100 px-lg-4">
-          <div className="card who-card rounded-5 py-5">
+          <div className="card who-card rounded-5">
             <div className="row text-light align-items-center justify-content-center">
               <div className="col-lg-4 col-md-6 col-sm-12 text-center">
                 <h2 className="display-3 fw-bold">Who we are?</h2>

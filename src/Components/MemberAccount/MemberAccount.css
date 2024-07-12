@@ -13,6 +13,10 @@
     color: #FFDE00;
 }
 
+.vr-2 {
+    height: 200px !important;
+}
+
 .complete {
     color:rgba(16, 67, 107, 1) !important ;
     outline: 2px solid rgba(16, 67, 107, 1);

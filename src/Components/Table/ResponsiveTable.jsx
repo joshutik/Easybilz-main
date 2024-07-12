@@ -2,13 +2,14 @@ import Table from 'react-bootstrap/Table';
 
 function ResponsiveTable() {
   return (
-    <Table responsive>
+    <Table responsive className='border-primary'>
     <thead>
       <tr>
         <th>Date</th>
         <th>Description</th>
         <th>Credit</th>
         <th>Debit</th>
+        <th>Balance</th>
         <th>Transaction Type</th>
         <th>Account</th>
         <th>Status</th>
@@ -20,6 +21,7 @@ function ResponsiveTable() {
         <td>xxxxxxxx xxxxxxxx</td>
         <td>₦xx,xxx</td>
         <td>₦xxxxxxxx</td>
+        <td>₦xxxxxxxx</td>
         <td>xxxxxxxx</td>
         <td>123xxxxxxxx0</td>
         <td>Completed</td>
@@ -29,6 +31,7 @@ function ResponsiveTable() {
         <td>xxxxxxxx</td>
         <td>₦xxxxxxxx</td>
         <td>₦xx,xxxxxx</td>
+        <td>₦xx,xxxxxx</td>
         <td>xxxxxxxx</td>
         <td>123xxxxxxxx0</td>
         <td>Completed</td>
@@ -36,6 +39,7 @@ function ResponsiveTable() {
       <tr>
         <td>03/01/2024</td>
         <td>xxxxxxxx</td>
+        <td>₦xxxxxxxx</td>
         <td>₦xxxxxxxx</td>
         <td>₦xxxxxxxx</td>
         <td>xxxxxxxx</td>
