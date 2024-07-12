@@ -41,6 +41,7 @@ const Login = () => {
       localStorage.setItem("authtoken", data.access_token);
       localStorage.setItem("userID", data.user_id);
       localStorage.setItem("firstName", data.firstName);
+      localStorage.setItem("lastName", data.middleName);
   
       navigate("/profile");
     } catch (err) {
