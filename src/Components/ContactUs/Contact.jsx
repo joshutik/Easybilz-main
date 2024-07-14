@@ -31,7 +31,9 @@ const Contact = () => {
         setLoading(false); // Set loading to false when the form submission ends
         // Handle success
         console.log("Form submitted successfully:", response);
-        setTimeout(()=>{window.location.reload()}, 5000);
+        alert("Form submitted successfully:");
+        window.location.reload()
+        // setTimeout(()=>{window.location.reload()}, 3000);
       })
       .catch((error) => {
         setLoading(false); // Set loading to false if there is an error
