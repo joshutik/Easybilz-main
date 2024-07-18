@@ -4,13 +4,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import CustomCarousel from "../Carousel/CustomCarousel"; // Import the renamed component
 import "./Contact.css";
+import { API_BASE_URL } from '../../config';
 
 const Contact = () => {
+  const apiHostname = API_BASE_URL;
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false); // State for tracking loading status
 
   const handleChange = (e) => {
     setFormData({
@@ -21,16 +24,26 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Replace 'YOUR_BACKEND_ENDPOINT' with your backend endpoint
+    setLoading(true); // Set loading to true when the form submission starts
     axios
-      .post("YOUR_BACKEND_ENDPOINT", formData)
+      .post(`${apiHostname}/user/contact_admin_email/`, formData)
       .then((response) => {
+        setLoading(false); // Set loading to false when the form submission ends
         // Handle success
         console.log("Form submitted successfully:", response);
+        alert("Form submitted successfully:");
+        window.location.reload()
+        // setTimeout(()=>{window.location.reload()}, 3000);
       })
       .catch((error) => {
+        setLoading(false); // Set loading to false if there is an error
         // Handle error
         console.error("Error submitting form:", error);
+        
+        setTimeout(()=>{window.location.reload()}, 5000);
+
+        
+
       });
   };
 
@@ -114,8 +127,13 @@ const Contact = () => {
                   <button
                     type="submit"
                     className="btn rounded-pill px-4 mt-3 position-absolute bottom-0 end-0 send border-0"
+                    disabled={loading} // Disable the button when loading
                   >
-                    Send Message
+                    {loading ? (
+                      <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    ) : (
+                      "Send Message"
+                    )}
                   </button>
                 </div>
               </form>
