@@ -173,7 +173,7 @@ const MemberAccount = () => {
             }`}
           >
             <div className="row gy-3 justify-content-center">
-              <div className="col-lg-3 col-md-12 col-sm-12 h-50">
+              <div className="col-lg-3 col-md-12 col-sm-12 h-50 w-25">
                 <div className="card payment-card-2 text-light py-4 px-3 w-100">
                   <div className="container p-3">
                     <h4 className="fee">Total Savings</h4>
@@ -258,6 +258,12 @@ const MemberAccount = () => {
                       <div className="btn-fund mt-3">
                         <button
                           className="btn ms-3 add-fund border-0 bg-transparent text-light rounded-pill"
+                          onClick={handleShowModal}
+                        >
+                          Take Loan
+                        </button>
+                        <button
+                          className="btn bg-light ms-3 mt-3 border-0 text-dark fw-bold rounded-pill"
                           onClick={handleShowModal}
                         >
                           Pay Loan

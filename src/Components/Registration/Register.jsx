@@ -241,7 +241,7 @@ const Register = () => {
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [otherNames, setOtherNames] = useState("");
-  const [middleName, setMiddleName] = useState("");
+  const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -274,7 +274,7 @@ const Register = () => {
         body: JSON.stringify({
           firstName,
           otherNames,
-          middleName,
+          surname,
           email,
           password,
         }),
@@ -358,13 +358,13 @@ const Register = () => {
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="form-group my-lg-4 my-3">
-                    <label htmlFor="mname">Middle Name</label>
+                    <label htmlFor="sname">Surname</label>
                     <input
                       type="text"
                       className="form-control border-dark rounded-5 my-2"
-                      id="mname"
-                      value={middleName}
-                      onChange={(e) => setMiddleName(e.target.value)}
+                      id="sname"
+                      value={surname}
+                      onChange={(e) => setSurname(e.target.value)}
                       required
                     />
                   </div>
@@ -447,7 +447,7 @@ export default Register;
 // const Register = ({ onNext }) => {
 //   const [firstName, setFirstName] = useState("");
 //   const [otherNames, setOtherNames] = useState("");
-//   const [middleName, setMiddleName] = useState("");
+//   const [surame, setMiddleName] = useState("");
 //   const [email, setEmail] = useState("");
 //   const [password, setPassword] = useState("");
 //   const [confirmPassword, setConfirmPassword] = useState("");
