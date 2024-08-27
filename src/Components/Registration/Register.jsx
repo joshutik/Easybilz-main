@@ -159,7 +159,7 @@ const Register = () => {
                   type="password"
                   className="form-control border-dark rounded-5 my-4"
                   id="password"
-                  placeholder="Enter your password"
+                  placeholder="Password should be at least 8 characters long"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
