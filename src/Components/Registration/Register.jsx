@@ -116,7 +116,7 @@ const Register = () => {
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="form-group my-lg-4 my-3">
-                    <label htmlFor="onames">Other Names</label>
+                    <label htmlFor="onames">Surname</label>
                     <input
                       type="text"
                       className="form-control border-dark rounded-5 my-2"
