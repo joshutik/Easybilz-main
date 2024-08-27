@@ -3,18 +3,18 @@ import img1 from "../assets/Services.png";
 import img2 from "../assets/Investment-icon.png";
 import img3 from "../assets/Savings-icon.png";
 import img4 from "../assets/Loans.png";
-import img5 from "../assets/Management-icon.png";
+// import img5 from "../assets/Management-icon.png";
 import img6 from "../assets/Development-icon.png";
 import "./Services.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SavingModal from "../Modal/SavingsModal/SavingModal";
 import InvestModal from '../Modal/InvestModal/InvestModal';
-import BusinessMgtModal from '../Modal/BusinessMgtModal/BusinessMgtModal';
+// import BusinessMgtModal from '../Modal/BusinessMgtModal/BusinessMgtModal';
 
 const Services = () => {
   const [showInvestmentModal, setShowInvestmentModal] = useState(false);
   const [showSavingModal, setShowSavingModal] = useState(false);
-  const [showMgtModal, setShowMgtModal] = useState(false);
+  // const [showMgtModal, setShowMgtModal] = useState(false);
 
   const handleInvestmentShow = () => setShowInvestmentModal(true);
   const handleInvestmentClose = () => setShowInvestmentModal(false);
@@ -22,8 +22,8 @@ const Services = () => {
   const handleSavingShow = () => setShowSavingModal(true);
   const handleSavingClose = () => setShowSavingModal(false);
 
-  const handleMgtShow = () => setShowMgtModal(true);
-  const handleMgtClose = () => setShowMgtModal(false);
+  // const handleMgtShow = () => setShowMgtModal(true);
+  // const handleMgtClose = () => setShowMgtModal(false);
   // showInvestmentModal
   // handleInvestmentClose
   return (
@@ -92,7 +92,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12">
+          {/* <div className="col-lg-4 col-md-4 col-sm-12">
             <div className="card savings w-100 px-3 py-4 rounded-5 border-0">
               <div className=" mb-3 mx-auto">
                 <img src={img5} alt="img-fluid" />
@@ -109,7 +109,7 @@ const Services = () => {
               </p>
             </div>
             <BusinessMgtModal show={showMgtModal} handleClose={handleMgtClose} />
-          </div>
+          </div> */}
           <div className="col-lg-4 col-md-4 col-sm-12">
             <div className="card bg-light w-100 px-3 py-4 rounded-5 border-0">
               <div className="mb-3 mx-auto">

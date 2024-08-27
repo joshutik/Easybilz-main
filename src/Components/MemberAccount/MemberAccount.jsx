@@ -173,7 +173,7 @@ const MemberAccount = () => {
             }`}
           >
             <div className="row gy-3 justify-content-center">
-              <div className="col-lg-3 col-md-12 col-sm-12 h-50 w-25">
+              <div className="col-lg-3 col-md-12 col-sm-12 h-50">
                 <div className="card payment-card-2 text-light py-4 px-3 w-100">
                   <div className="container p-3">
                     <h4 className="fee">Total Savings</h4>
@@ -270,7 +270,7 @@ const MemberAccount = () => {
                         </button>
                       </div>
                     </div>
-                    <div className="col-lg-1 col-md-1 col-sm-1 h-50">
+                    <div className="d-none d-md-block col-lg-1 col-md-1 col-sm-1 h-50">
                       <div className="vr vr-2"></div>
                     </div>
 
