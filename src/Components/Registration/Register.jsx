@@ -295,7 +295,7 @@ const Register = () => {
       localStorage.setItem("firstName", data.firstName);
       localStorage.setItem("registrationNumber", registrationNumber);
 
-      navigate('/reg-payment');
+      navigate('/login');
     } catch (err) {
       setError('Registration failed. Please try again.');
       console.error('Registration error:', err);
