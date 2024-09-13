@@ -2,10 +2,18 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MemberRegistration.css';
 import { API_BASE_URL } from '../../config';
+import { Spinner } from 'react-bootstrap'; // Or use your own spinner component
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+
+
+
+import 'jspdf-autotable'; // Optional: for adding tables in PDF
 
 const MemberRegistration = () => {
   const apiHostname = API_BASE_URL;
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     fname: '',
@@ -43,10 +51,67 @@ const MemberRegistration = () => {
 
   const [isProfileComplete, setIsProfileComplete] = useState(false);
 
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const userID = localStorage.getItem('userID');
+      if (!userID) {
+        console.error('User ID not found in local storage');
+        return;
+      }
+
+      try {
+        const response = await fetch(`${apiHostname}/user/create/${userID}/`);
+        if (response.ok) {
+          const data = await response.json();
+          // Map API response fields to formData fields
+          setFormData({
+            ...formData,
+            fname: data.firstName || '',
+            surname: data.middleName || '',
+            maritalStatus: data.maritalStatus || ''
+          });
+        } else {
+          console.error('Failed to fetch user data');
+        }
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [apiHostname]);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const userID = localStorage.getItem('userID');
+      if (!userID) {
+        console.error('User ID not found in local storage');
+        return;
+      }
+
+      try {
+        const response = await fetch(`${apiHostname}/user/create/${userID}/`);
+        if (response.ok) {
+          const data = await response.json();
+          setFormData(data);
+
+        } else {
+          console.error('Failed to fetch user data');
+        }
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [apiHostname]);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
   };
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -77,6 +142,7 @@ const MemberRegistration = () => {
     } catch (error) {
       console.error('Error submitting profile:', error);
     }
+
   };
 
   // Function to check if all required fields are filled
@@ -93,12 +159,57 @@ const MemberRegistration = () => {
   useEffect(() => {
     setIsProfileComplete(checkFormCompletion());
   }, [formData]);
+
+
+  function exportToPDF() {
+    setLoading(true);
+    const element = document.getElementById('formContainer');
+    const buttons = document.querySelectorAll('#formContainer .btn');
+  
+    // Store buttons in a temporary array and remove them
+    const buttonArray = Array.from(buttons);
+    buttonArray.forEach(button => button.parentNode?.removeChild(button));
+  
+    if (element) {
+      html2canvas(element, { scrollY: -window.scrollY }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+  
+        const imgWidth = 210; // A4 width in mm
+        const pageHeight = 295; // A4 height in mm
+        const imgHeight = canvas.height * imgWidth / canvas.width;
+        let heightLeft = imgHeight;
+  
+        let position = 0;
+  
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+  
+        while (heightLeft >= 0) {
+          position = heightLeft - imgHeight;
+          pdf.addPage();
+          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+        }
+  
+        pdf.save('Member Registration Form.pdf');
+        setLoading(false);
+  
+        // Reinsert buttons
+        buttonArray.forEach(button => {
+          element.appendChild(button);
+        });
+      });
+    }
+  }
+  
+
   return (
     <div className="container-fluid bg-subtle">
       <div className="row justify-content-center py-5">
       <h2 className='text-center py-4'>Complete Your Profile</h2>
         <div className="col-lg-8 col-md-6 col-sm-12 px-0">
-          <form onSubmit={handleSubmit} className='bg-light px-4 py-5 rounded'>
+          <form onSubmit={handleSubmit} className='bg-light px-4 py-5 rounded pdf-style' id="formContainer">
             {/* Personal Details */}
             <h5 className="fw-bold">Personal Details</h5>
             <div className="mx-auto">
@@ -139,6 +250,7 @@ const MemberRegistration = () => {
                       onChange={handleChange}
                       required
                     >
+                      <option value=""></option>
                       <option value="Single">Single</option>
                       <option value="Married">Married</option>
                       <option value="Divorce">Divorce</option>
@@ -170,6 +282,7 @@ const MemberRegistration = () => {
                           onChange={handleChange}
                           required
                         >
+                          <option value=""></option>
                           <option value="Nigerian">Nigerian</option>
                           <option value="Foreign">Foreign</option>
                         </select>
@@ -185,6 +298,7 @@ const MemberRegistration = () => {
                           onChange={handleChange}
                           required
                         >
+                          <option value=""></option>
                           <option value="Male">Male</option>
                           <option value="Female">Female</option>
                         </select>
@@ -277,6 +391,7 @@ const MemberRegistration = () => {
                       onChange={handleChange}
                       required
                     >
+                      <option value=""></option>
                       <option value="National ID">National ID</option>
                       <option value="Voter&apos;s Card">Voter&apos;s Card</option>
                       <option value="Driver&apos;s License">Driver&apos;s License</option>
@@ -310,6 +425,7 @@ const MemberRegistration = () => {
                       onChange={handleChange}
                       required
                     >
+                      <option value=""></option>
                       <option value="Salary">Salary</option>
                       <option value="Self Employed">Self Employed</option>
                       <option value="Unemployed">Unemployed</option>
@@ -529,7 +645,7 @@ const MemberRegistration = () => {
                     <input
                       type="text"
                       className="form-control border-dark rounded-5 my-3"
-                      id="accountNumber"
+                      id="bankName"
                       value={formData.bankName}
                       onChange={handleChange}
                       required
@@ -570,11 +686,22 @@ const MemberRegistration = () => {
                 )}
                 <button
                   type="submit"
-                  className="btn bg-reg w-75 btn-dark rounded-5 my-3 border-0"
+                  className="btn bg-reg w-50 btn-dark rounded-5 my-3 border-0"
                   // disabled={!isProfileComplete}
                 >
                   Save
                 </button>
+
+              
+                <button
+                  type="button"
+                  onClick={exportToPDF}
+                  className="btn bg-reg w-50 btn-dark rounded-5 my-3 border-0"
+                  disabled={loading}
+                >
+                  {loading ? <Spinner animation="border" size="sm" /> : 'Download PDF'}
+                </button>
+
               </div>
               </div>
             </form>
