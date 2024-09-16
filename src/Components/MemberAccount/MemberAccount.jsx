@@ -175,10 +175,10 @@ const MemberAccount = () => {
             <div className="row gy-3 justify-content-center">
               <div className="col-lg-3 col-md-12 col-sm-12 h-50">
                 <div className="card payment-card-2 text-light py-4 px-3 w-100">
-                  <div className="container p-3">
-                    <h4 className="fee">Total Savings</h4>
+                  <div className="container py-1">
+                    <h5 className="fee">Total Savings</h5>
                     <p className=" mt-3 fs-3">
-                      <span className="fw-bold">₦10,000,000</span>
+                      <span className="fw-bold">₦0,000,000</span>
                     </p>
                   </div>
                   <div className="btn-fund mt-3">
@@ -216,30 +216,30 @@ const MemberAccount = () => {
                       <div className="container p-2">
                         <h5 className="fee">Total Investment</h5>
                         <p className=" mt-3 fs-3">
-                          <span className="fw-bold">₦5,000,000</span>
+                          <span className="fw-bold">₦0,000,000</span>
                         </p>
                       </div>
                       <div className="btn-fund mt-3">
                         <button
-                          className="btn ms-3 add-fund border-0 bg-transparent text-light rounded-pill"
+                          className="btn ms-3 mb-sm-4 add-fund border-0 bg-transparent text-light rounded-pill"
                           onClick={handleShowModal}
                         >
                           Add funds
                         </button>
                       </div>
                     </div>
-                    <div className="col-lg-1 col-md-1 col-sm-1 h-50">
+                    <div className="d-none d-md-block col-lg-1 col-md-1 col-sm-1 h-50">
                       <div className="vr vr-2"></div>
                     </div>
 
                     <div className="col-lg-5 col-md-5 col-sm-5 pt-2">
                       <div>
                         <h5 className="fee fw-bold">ROI</h5>
-                        <span className="Amount-paid fw-bold fs-3">20.5%</span>
+                        <span className="Amount-paid fw-bold fs-3">36%</span>
                       </div>
                       <div className="mt-3">
                         <h5 className="fee fw-bold">Total Earnings</h5>
-                        <span className="total-amount-owe fw-bold fs-3">₦20,000</span>
+                        <span className="total-amount-owe fw-bold fs-3">₦0,000</span>
                       </div>
                     </div>
                   </div>
@@ -252,7 +252,7 @@ const MemberAccount = () => {
                       <div className="container p-2">
                         <h5 className="fee">Total Loan Due</h5>
                         <p className=" mt-3 fs-3">
-                          <span className="fw-bold">₦5,000,000</span>
+                          <span className="fw-bold">₦0,000.00</span>
                         </p>
                       </div>
                       <div className="btn-fund mt-3">
@@ -263,7 +263,7 @@ const MemberAccount = () => {
                           Take Loan
                         </button>
                         <button
-                          className="btn bg-light ms-3 mt-3 border-0 text-dark fw-bold rounded-pill"
+                          className="btn bg-light ms-3 mt-lg-3 border-0 text-dark fw-bold rounded-pill"
                           onClick={handleShowModal}
                         >
                           Pay Loan
@@ -277,7 +277,7 @@ const MemberAccount = () => {
                     <div className="col-lg-5 col-md-5 col-sm-5 pt-2">
                       <div>
                         <h5 className="fee fw-bold">Paid</h5>
-                        <span className="Amount-paid fw-bold fs-3">₦5,000</span>
+                        <span className="Amount-paid fw-bold fs-3">₦0,000</span>
                       </div>
                       <div className="mt-3">
                         <h5 className="fee fw-bold">Balance</h5>

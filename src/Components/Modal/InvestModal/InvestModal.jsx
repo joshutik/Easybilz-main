@@ -10,7 +10,7 @@ const InvestModal = ({ show, handleClose }) => {
       </Modal.Header>
       <Modal.Body>
         <p>
-          Investments Portfolio: Fixed invest: members and non members are
+          {/* Investments Portfolio: Fixed invest: members and non members are
           encouraged to invest a fixed amount of money and can earn about 25% to
           60% within 6 to 12months. Agriculture Package: Members are to invest
           as small as ₦5000 In the cassava processing farm operated by the
@@ -18,7 +18,10 @@ const InvestModal = ({ show, handleClose }) => {
           Estate: Members and non members can invest in the real estates
           investments portfolio of the corporative and earn At most 70% returns,
           own their own properties and land banking. Members can save towards
-          acquiring a property as well.
+          acquiring a property as well. */}
+          Our goal is to ensure a steady of income to handle their bills and
+          build their finances. The difference investment plans tailored to
+          achieve specific needs of our members
         </p>
       </Modal.Body>
       <Modal.Footer>

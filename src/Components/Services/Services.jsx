@@ -1,4 +1,4 @@
-import { useState} from 'react'
+import { useState } from "react";
 import img1 from "../assets/Services.png";
 import img2 from "../assets/Investment-icon.png";
 import img3 from "../assets/Savings-icon.png";
@@ -6,9 +6,9 @@ import img4 from "../assets/Loans.png";
 // import img5 from "../assets/Management-icon.png";
 import img6 from "../assets/Development-icon.png";
 import "./Services.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import SavingModal from "../Modal/SavingsModal/SavingModal";
-import InvestModal from '../Modal/InvestModal/InvestModal';
+import InvestModal from "../Modal/InvestModal/InvestModal";
 // import BusinessMgtModal from '../Modal/BusinessMgtModal/BusinessMgtModal';
 
 const Services = () => {
@@ -33,10 +33,10 @@ const Services = () => {
           <div className="col-md-4 col-md-4 col-sm-12">
             <div className="d-flex">
               <h2 className="w-75">We&apos;d help you</h2>
-             <div className="border border-bottom-0 border-start-0 border-end-0 border-top-5 w-50 h-0 my-4 border-primary bord"></div>
+              <div className="border border-bottom-0 border-start-0 border-end-0 border-top-5 w-50 h-0 my-4 border-primary bord"></div>
             </div>
             <div>
-              <img src={img1} alt="" className="img-fluid"/>
+              <img src={img1} alt="" className="img-fluid" />
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
@@ -48,19 +48,33 @@ const Services = () => {
                 Investment
               </h5>
               <p className="card-text">
-                Our investments is a purposefully motivated one aimed at easing
+                {/* Our investments is a purposefully motivated one aimed at easing
                 an aspect your bills. We are focused on easing the financial
                 burdens, building financial goals and billings of members and
                 clients. The ROI is designed or tailored to ease a particular
-                bil or bills. <span className=' fw-bold text-primary pe-auto moda' onClick={handleInvestmentShow}>See more.......</span>
+                bil or bills.  */}
+                As a cooperative we invest in 3 key areas of investments
+                portfolios covering agriculture, real estate and
+                trades/distributionship. Members can invest and earn as high as
+                36% ROI per anum. Investing members can earn within 3, to 6 and
+                12 months time. Investment is guaranteed and are insured.
+                <span
+                  className=" fw-bold text-primary pe-auto moda"
+                  onClick={handleInvestmentShow}
+                >
+                  See more.......
+                </span>
               </p>
             </div>
-            <InvestModal show={showInvestmentModal} handleClose={handleInvestmentClose} />
+            <InvestModal
+              show={showInvestmentModal}
+              handleClose={handleInvestmentClose}
+            />
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
             <div className="card savings w-100 px-3 py-4 rounded-5 border-0">
               <div className="mb-3 mx-auto">
-                <img src={img3} alt="" className="img-fluid"/>
+                <img src={img3} alt="" className="img-fluid" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
                 Savings
@@ -70,15 +84,23 @@ const Services = () => {
                 And we want to be able to help you achieve the highest levels of
                 financial security and ease. With Eazybillz, you do not just
                 save, you save to earn.
-                <span className=' fw-bold text-primary pe-auto moda' onClick={handleSavingShow}>See more.......</span>
+                <span
+                  className=" fw-bold text-primary pe-auto moda"
+                  onClick={handleSavingShow}
+                >
+                  See more.......
+                </span>
               </p>
             </div>
-            <SavingModal show={showSavingModal} handleClose={handleSavingClose} />
+            <SavingModal
+              show={showSavingModal}
+              handleClose={handleSavingClose}
+            />
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
             <div className="card invest w-100 px-3 py-4 rounded-5 border-0">
               <div className=" mb-3 mx-auto">
-                <img src={img4} alt="" className="img-fluid"/>
+                <img src={img4} alt="" className="img-fluid" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
                 Loans
@@ -119,12 +141,20 @@ const Services = () => {
                 Business Development
               </h5>
               <p className="card-text">
-                In many cases people have money but do not know where to put the
+                {/* In many cases people have money but do not know where to put the
                 money or invest in. That is why we want to help you set up
                 profitable businesses, manage it and make sure it gets the right
                 structure before handing it over to you. Eazybillz is the future
-                you’ve been dreaming about
-                <span className=' fw-bold text-primary modal'>See more.......</span>
+                you’ve been dreaming about */}
+                We manage and set up businesses for individuals and
+                organizations. We have a team of business expert that can guild
+                you into business ideas, and guild you through it. We also set
+                up and run it for our busy members. We believe that multiple
+                source of income is a sure way of sustaining financial stability
+                and we are determined to help you get it.
+                <span className=" fw-bold text-primary modal">
+                  See more.......
+                </span>
               </p>
             </div>
           </div>
