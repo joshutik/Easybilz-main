@@ -122,6 +122,7 @@ import MemberAccountNav from "../MemberAccountNav/AccountNav";
 import Table from "../Table/ResponsiveTable";
 import AddFundsModal from '../AddFundsModal/AddFundsModal'
 import Footer from "../Footer/Footer";
+import DownloadForm from "../DownloadForm/DownlaodForm";
 
 const MemberAccount = () => {
   const [showModal, setShowModal] = useState(false);
@@ -292,7 +293,7 @@ const MemberAccount = () => {
           </div>
           {!isProfileCompleted && (
             <>
-              <div className="col-lg-1 col-md-6 col-sm-12 d-md-none d-lg-block text-center">
+              <div className="d-none d-md-block col-lg-1 col-md-6 col-sm-12 d-md-none d-lg-block text-center">
                 <div className="vr vh-100" />
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
@@ -316,8 +317,11 @@ const MemberAccount = () => {
                         className="btn bg-light px-5 fw-bold border-primary rounded-pill complete"
                         onClick={handleProfileComplete}
                       >
-                        Complete Profile
+                        Complete Registration
                       </Link>
+                    <div className="mt-4">
+                      <DownloadForm/>
+                    </div>
                     </div>
                   </div>
                 </div>

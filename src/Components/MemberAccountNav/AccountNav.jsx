@@ -253,8 +253,8 @@ const MembershipNavbar = () => {
             </div>
             {showDropdown && (
               <div className="dropdown-menu dropdown-menu-end show rounded-4 text-center">
-                <Link className="dropdown-item my-2 fw-bold text-center" to="/profile"><i className="bi bi-person-circle"> </i>My Account</Link>
-                <Link className="dropdown-item text-danger fw-bold me-5" to="/logout"> <i className="bi bi-box-arrow-left"> </i>Logout</Link>
+                <Link className="dropdown-item my-2 fw-bold text-center" to="/profile"><i className="bi bi-person-circle"> </i> My Account</Link>
+                <Link className="dropdown-item text-danger fw-bold me-5" to="/logout"> <i className="bi bi-box-arrow-left"></i> Logout</Link>
               </div>
             )}
           </div>

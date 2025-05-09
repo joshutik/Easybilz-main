@@ -83,10 +83,10 @@ const Contact = () => {
             <div>
               <i className="bi bi-globe2 fs-4"></i>{" "}
               <a
-                href="http://www.easybillz.com"
+                href="https://www.easybillzcoop.com"
                 className="text-decoration-none"
               >
-                www.easybillz.com
+                www.easybillzcoop.com
               </a>
             </div>
             <div className="w-100">

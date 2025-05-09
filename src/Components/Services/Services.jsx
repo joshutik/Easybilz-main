@@ -1,10 +1,10 @@
 import { useState } from "react";
-import img1 from "../assets/Services.png";
-import img2 from "../assets/Investment-icon.png";
-import img3 from "../assets/Savings-icon.png";
-import img4 from "../assets/Loans.png";
-// import img5 from "../assets/Management-icon.png";
-import img6 from "../assets/Development-icon.png";
+import img1 from "../assets/fluent_savings-24-filled.png"
+import img2 from "../assets/stash_target.png";
+import img3 from "../assets/Vector (2).png";
+import img4 from "../assets/icon-park-solid_stock-market.png";
+import img5 from "../assets/fluent_savings-24-filled (1).png";
+import img6 from "../assets/fluent_people-community-32-filled.png";
 import "./Services.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SavingModal from "../Modal/SavingsModal/SavingModal";
@@ -29,23 +29,20 @@ const Services = () => {
   return (
     <div className="container-fluid mt-5 pt-5">
       <div className="container">
-        <div className="row gy-3 py-5">
-          <div className="col-md-4 col-md-4 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="d-flex">
               <h2 className="w-75">We&apos;d help you</h2>
               <div className="border border-bottom-0 border-start-0 border-end-0 border-top-5 w-50 h-0 my-4 border-primary bord"></div>
             </div>
-            <div>
-              <img src={img1} alt="" className="img-fluid" />
-            </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12">
+        <div className="row gy-3 py-5">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card invest w-100 px-3 py-4 rounded-5 border-0 border-0">
-              <div className=" mb-3 mx-auto">
-                <img src={img2} alt="" className="img-fluid" />
+              <div className=" mb-3 mx-auto text-end position-absolute bottom-0 end-0">
+                <img src={img1} alt="" className="img-fluid w-75" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
-                Investment
+                Fix Savings
               </h5>
               <p className="card-text">
                 {/* Our investments is a purposefully motivated one aimed at easing
@@ -71,15 +68,15 @@ const Services = () => {
               handleClose={handleInvestmentClose}
             />
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card savings w-100 px-3 py-4 rounded-5 border-0">
-              <div className="mb-3 mx-auto">
-                <img src={img3} alt="" className="img-fluid" />
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="card savings w-100 px-3 py-4 rounded-5 border-0 position-relative">
+              <div className="text-end position-absolute bottom-0 end-0">
+                <img src={img2} alt="" className="img-fluid w-75" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
-                Savings
+                Target Savings
               </h5>
-              <p className="card-text">
+              <p className="card-text pb-4">
                 Savings are a crucial aspect of financial health and stability.
                 And we want to be able to help you achieve the highest levels of
                 financial security and ease. With Eazybillz, you do not just
@@ -97,13 +94,13 @@ const Services = () => {
               handleClose={handleSavingClose}
             />
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card invest w-100 px-3 py-4 rounded-5 border-0">
-              <div className=" mb-3 mx-auto">
-                <img src={img4} alt="" className="img-fluid" />
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="card invest bills w-100 px-3 py-4 rounded-5 border-0">
+              <div className="text-end position-absolute bottom-0 end-0">
+                <img src={img3} alt="" className="img-fluid w-75" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
-                Loans
+                Save for bills
               </h5>
               <p className="card-text">
                 We offer loans to suit a variety of needs and circumstances. Our
@@ -114,7 +111,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          {/* <div className="col-lg-4 col-md-4 col-sm-12">
+          {/* <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card savings w-100 px-3 py-4 rounded-5 border-0">
               <div className=" mb-3 mx-auto">
                 <img src={img5} alt="img-fluid" />
@@ -132,13 +129,49 @@ const Services = () => {
             </div>
             <BusinessMgtModal show={showMgtModal} handleClose={handleMgtClose} />
           </div> */}
-          <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card bg-light w-100 px-3 py-4 rounded-5 border-0">
-              <div className="mb-3 mx-auto">
-                <img src={img6} alt="" className="img-fluid" />
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="card bg-light akawo w-100 px-3 py-4 rounded-5 border-0">
+              <div className="mb-3 text-end position-absolute bottom-0 end-0">
+                <img src={img4} alt="" className="img-fluid w-75" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
-                Business Development
+                Akawo (Daily Market Savings)
+              </h5>
+              <p className="card-text">
+                We manage and set up businesses for individuals and
+                organizations. We have a team of business expert that can guild
+                you into business ideas, and guild you through it. We also set
+                up and run it for our busy members. We believe that multiple
+                source of income is a sure way of sustaining financial stability
+                and we are determined to help you get it.
+                <span className=" fw-bold text-primary modal">
+                  See more.......
+                </span>
+              </p>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="card bg-light w-100 px-3 py-4 rounded-5 ajo border-0">
+                <div className="text-end position-absolute bottom-0 end-0">
+                  <img src={img5} alt="" className="img-fluid w-75" />
+                </div>
+              <h5 className="card-title fs-3 fw-bold text-center my-4">
+                Ajo (Contribution)
+              </h5>
+              <p className="card-text">
+                We manage and set up businesses for individuals and
+                organizations. We have a team of business expert that can guild
+                you into business ideas, and guild you through it. 
+              </p>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="card bg-light w-100 px-3 py-4 rounded-5 border-0">
+              <div className="mb-3 text-end position-absolute bottom-0 end-0">
+                <img src={img6} alt="" className="img-fluid w-75" />
+              </div>
+              <h5 className="card-title fs-3 fw-bold text-center my-4">
+                Personal Savings
               </h5>
               <p className="card-text">
                 {/* In many cases people have money but do not know where to put the

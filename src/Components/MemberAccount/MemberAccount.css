@@ -18,6 +18,7 @@
 }
 
 .complete {
-    color:rgba(16, 67, 107, 1) !important ;
-    outline: 2px solid rgba(16, 67, 107, 1);
+    background-color:rgba(16, 67, 107, 1) !important ;
+    color: white;
+    /* outline: 2px solid rgba(16, 67, 107, 1); */
 }

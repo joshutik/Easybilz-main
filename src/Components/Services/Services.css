@@ -10,15 +10,31 @@
 } */
 
 .invest {
-    background-color: #FFDE0033 !important;
+    background-color: #DCECFB !important;
 }
 
 .savings {
-    background-color: #1C74BB33 !important;
+    background-color: #E7F3FF !important;
 }
 
 .card {
-    height: 100% !important;
+    min-height: 60% !important;
+}
+
+.bills {
+    background-color: #D8F2E7 !important;
+}
+
+.akawo {
+    background-color: #FDE9E2 !important;
+}
+
+.ajo {
+    background-color: #E9EAEF !important;
+}
+
+.easy-save {
+    background-color: #FFEBF4 !important;
 }
 
 .bord {
