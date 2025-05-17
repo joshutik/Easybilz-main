@@ -100,14 +100,17 @@ const Heropage = () => {
                 finances easily and effectively.
               </p>
               <div>
-                <Link to={"/register"} className="btn btn-hero px-5 py-2 text-light rounded-pill">
+                <Link
+                  to={"/register"}
+                  className="btn btn-hero px-5 py-2 text-light rounded-pill"
+                >
                   Get Started
                 </Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 position-relative">
               <div className="hero-img mt-0">
-                <CustomCarouselForHome/>
+                <CustomCarouselForHome />
                 {/* <img
                   src={img1}
                   alt="lady with phone"
@@ -136,14 +139,19 @@ const Heropage = () => {
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12 mt-lg-5 text-center text-md-start">
                 <p className="text-start">
-                  Easybillz multipurpose cooperative society Ltd (Eazybillz
+                  {/* Easybillz multipurpose cooperative society Ltd (Eazybillz
                   co-op) is a savings, credit and investments cooporative
                   society with a multipurpose operations tailored to promote the
                   economic interests of her members. Our primary objective is to
                   make the financial journey of every individuals and businesses
                   that&apos;s a member easy, simple and attainable. We achieve this
                   by promoting basic financial tools and engaging our members in
-                  various investment and enterprises.
+                  various investment and enterprises. */}
+                  Easybillz multipurpose cooperative society Ltd is a savings,
+                  credit and investment cooperative society. Our primary
+                  objective is to make the financial journey of every individual
+                  and business that&apos; s a member easy, simple and
+                  attainable.
                 </p>
               </div>
             </div>
