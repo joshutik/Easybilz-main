@@ -44,13 +44,13 @@ const Services = () => {
               <h5 className="card-title fs-3 fw-bold text-center my-4">
                 Savings
               </h5>
-              <p className="card-text">
-                We encourage our member to cultivate a savings culture for their
+              <p className="card-text pb-4">
+                We encourage our members to cultivate a savings culture for their
                 business and personal plans. You are not saving because you
                 don&apos;t have but rather you and have because you are not
                 saving.
                 <span
-                  className="fw-bold text-primary pe-auto moda"
+                  className=" fw-bold text-primary pe-auto spanmodal"
                   onClick={handleSavingShow}
                 >
                   See more.......
@@ -62,6 +62,7 @@ const Services = () => {
               />
             </div>
           </div>
+          <SavingModal show={showSavingModal} handleClose={handleSavingClose} />
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card savings w-100 px-3 py-4 rounded-5 border-0 position-relative">
               <div className="text-end position-absolute bottom-0 end-0">
@@ -88,7 +89,7 @@ const Services = () => {
               <h5 className="card-title fs-3 fw-bold text-center my-4">
                 Investment
               </h5>
-              <p className="card-text">
+              <p className="card-text pb-4">
                 Our investment portfolio is open to members to earn at least 36%
                 returns per anum. Members can invest in our agro business,
                 mutual fund system, real estate and FG bond and trades
@@ -104,13 +105,11 @@ const Services = () => {
               <h5 className="card-title fs-3 fw-bold text-center my-4">
                 Bill Managment
               </h5>
-              <p className="card-text">
+              <p className="card-text pb-4">
                 Allow your savings and investment returns sort out bill
-                automatically without bordering ursef. This run on our payclob
+                automatically without bordering yourself. This run on our payclob
                 platform.
-                <span className=" fw-bold text-primary modal">
-                  See more.......
-                </span>
+               
               </p>
             </div>
           </div>
@@ -138,7 +137,7 @@ const Services = () => {
                 Business Setup and Management
               </h5>
               <p className="card-text">
-                We guild you through the process of setting up a business,
+                We guide you through the process of setting up a business,
                 getting the right business, the right location and staffing.
                 <span className=" fw-bold text-primary modal">
                   See more.......
@@ -160,7 +159,7 @@ const Services = () => {
                 profitable businesses, manage it and make sure it gets the right
                 structure before handing it over to you. Eazybillz is the future
                 you’ve been dreaming about */}
-                We help u branding, business plan and registration, data and
+                We help your branding, business plan and registration, data and
                 financial analysis of your business, business growth expertise,
                 subletting services, asset and portfolio management, investment
                 broker and management, IT services.
