@@ -123,6 +123,7 @@ import Table from "../Table/ResponsiveTable";
 import AddFundsModal from '../AddFundsModal/AddFundsModal'
 import Footer from "../Footer/Footer";
 import DownloadForm from "../DownloadForm/DownlaodForm";
+import Uploadform from "../Uploadform/Uploadform";
 
 const MemberAccount = () => {
   const [showModal, setShowModal] = useState(false);
@@ -174,7 +175,7 @@ const MemberAccount = () => {
             }`}
           >
             <div className="row gy-3 justify-content-center">
-              <div className="col-lg-3 col-md-12 col-sm-12 h-50">
+              <div className="col-lg-12 col-md-12 col-sm-12 h-50">
                 <div className="card payment-card-2 text-light py-4 px-3 w-100">
                   <div className="container py-1">
                     <h5 className="fee">Total Savings</h5>
@@ -210,17 +211,17 @@ const MemberAccount = () => {
                   </div>
                 </div>
               </div> */}
-              <div className="col-lg-5 col-md-12 col-sm-12 h-50">
+              <div className="col-lg-12 col-md-12 col-sm-12 h-50">
                 <div className="card payment-card-2 text-light py-3 px-3">
                   <div className="row justify-content-center al">
-                    <div className="col-lg-5 col-md-6 col-sm-6 px-0">
+                    <div className="col-lg-4 col-md-6 col-sm-6 px-0">
                       <div className="container p-2">
                         <h5 className="fee">Total Investment</h5>
-                        <p className=" mt-3 fs-3">
+                        <p className="mt-3 fs-3">
                           <span className="fw-bold">₦0,000,000</span>
                         </p>
                       </div>
-                      <div className="btn-fund mt-3">
+                      <div className="btn-fund mt-2">
                         <button
                           className="btn ms-3 mb-sm-4 add-fund border-0 bg-transparent text-light rounded-pill"
                           onClick={handleShowModal}
@@ -233,8 +234,8 @@ const MemberAccount = () => {
                       <div className="vr vr-2"></div>
                     </div>
 
-                    <div className="col-lg-5 col-md-5 col-sm-5 pt-2">
-                      <div>
+                    <div className="col-lg-6 col-md-5 col-sm-5 pt-2">
+                      <div className="">
                         <h5 className="fee fw-bold">ROI</h5>
                         <span className="Amount-paid fw-bold fs-3">36%</span>
                       </div>
@@ -246,7 +247,7 @@ const MemberAccount = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-5 col-md-12 col-sm-12 h-50">
+              <div className="col-lg-12 col-md-12 col-sm-12 h-50">
                 <div className="card payment-card-2 text-light py-3 px-3">
                   <div className="row justify-content-center al">
                     <div className="col-lg-5 col-md-6 col-sm-6 px-0">
@@ -256,7 +257,7 @@ const MemberAccount = () => {
                           <span className="fw-bold">₦0,000.00</span>
                         </p>
                       </div>
-                      <div className="btn-fund mt-3">
+                      <div className="btn-fund mt-sm-3">
                         <button
                           className="btn ms-3 add-fund border-0 bg-transparent text-light rounded-pill"
                           onClick={handleShowModal}
@@ -264,7 +265,7 @@ const MemberAccount = () => {
                           Take Loan
                         </button>
                         <button
-                          className="btn bg-light ms-3 mt-lg-3 border-0 text-dark fw-bold rounded-pill"
+                          className="btn bg-light ms-3 mt-lg-3 mt-sm-3  border-0 text-dark fw-bold rounded-pill"
                           onClick={handleShowModal}
                         >
                           Pay Loan
@@ -321,6 +322,9 @@ const MemberAccount = () => {
                       </Link>
                     <div className="mt-4">
                       <DownloadForm/>
+                    </div>
+                    <div className="mt-4">
+                      <Uploadform/>
                     </div>
                     </div>
                   </div>

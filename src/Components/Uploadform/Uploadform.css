@@ -1,8 +1,7 @@
-.download {
-    color: rgba(16, 67, 107, 1) !important;
-    background-color: white !important;
+.upload {
+    background-color: rgba(16, 67, 107, 1) !important;
+    color: white !important;
     outline: 2px solid rgba(16, 67, 107, 1) !important;
     border: none !important;
     white-space: nowrap !important;
-
 }
