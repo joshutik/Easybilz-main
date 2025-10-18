@@ -140,7 +140,7 @@ const Login = () => {
                   </button>
                 </div>
                 <div className="container">
-                  {error && <div className="alert alert-danger">{error}</div>}
+                  {error && <div className="alert alert-danger mt-3 text-center">{error}</div>}
                 </div>
                 <div className="text-center">
                   <p className="mt-lg-5 mt-md-3 mb-5 pb-5">

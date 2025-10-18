@@ -1,11 +1,27 @@
-.bg-reg {
-    background-color: color #10436B !important;
+.bg-reg, .reg-1 {
+    background-color: #10436B !important;
 }
+
 .bg-subtle {
+background-color: #10436B !important;
+}
+
+.bg-subtle2 {
 background-color: rgb(238, 235, 235);
 }
 
-@media screen and (max-width:767px) {
+.memb {
+    border: none;
+    border-bottom:2px dotted black !important ;
+}
+.signature {
+    border: none;
+    border-bottom:2px solid black !important ;
+}
+
+
+
+@media screen and (min-width:767px) and (max-width:767){
     .bg-reg {
         background-color: color #10436B !important;
     }  

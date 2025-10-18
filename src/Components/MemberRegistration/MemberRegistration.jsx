@@ -5,6 +5,8 @@ import { API_BASE_URL } from '../../config';
 import { Spinner } from 'react-bootstrap'; // Or use your own spinner component
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import img1 from "../assets/Logo.png";
+
 
 
 
@@ -16,14 +18,24 @@ const MemberRegistration = () => {
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
+    membershipNumber: '',
+    date: '',
     fname: '',
     surname: '',
     maritalStatus: 'Single', // Default value
+    spouseName: '',
+    dateOfBirth: '',
+    placeOfBirth: '',
     stateOfOrigin: '',
+    homeTown: '',
     nationality: 'Nigerian', // Default value
     gender: 'Male', // Default value
     motherName: '',
+    religion: '',
+    lga: '',
     residenceAddress: '',
+    landmark: '',
+    localGovernmentResidence: '',
     town: '',
     email: '',
     mobileNumber: '',
@@ -34,6 +46,7 @@ const MemberRegistration = () => {
     businessName: '',
     state: '',
     officePhoneNumber: '',
+    natureOfBusiness: '',
     nextOfKinFname: '',
     nextOfKinSurname: '',
     nextOfKinOtherNames: '',
@@ -46,7 +59,9 @@ const MemberRegistration = () => {
     nextOfKinState: '',
     bankName: '',
     accountName: '',
-    accountNumber: ''
+    accountNumber: '',
+    bankVerificationNumber: '',
+    signature: ''
   });
 
   const [isProfileComplete, setIsProfileComplete] = useState(false);
@@ -165,36 +180,36 @@ const MemberRegistration = () => {
     setLoading(true);
     const element = document.getElementById('formContainer');
     const buttons = document.querySelectorAll('#formContainer .btn');
-  
+
     // Store buttons in a temporary array and remove them
     const buttonArray = Array.from(buttons);
     buttonArray.forEach(button => button.parentNode?.removeChild(button));
-  
+
     if (element) {
       html2canvas(element, { scrollY: -window.scrollY }).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
-  
+
         const imgWidth = 210; // A4 width in mm
         const pageHeight = 295; // A4 height in mm
         const imgHeight = canvas.height * imgWidth / canvas.width;
         let heightLeft = imgHeight;
-  
+
         let position = 0;
-  
+
         pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
         heightLeft -= pageHeight;
-  
+
         while (heightLeft >= 0) {
           position = heightLeft - imgHeight;
           pdf.addPage();
           pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
           heightLeft -= pageHeight;
         }
-  
+
         pdf.save('Member Registration Form.pdf');
         setLoading(false);
-  
+
         // Reinsert buttons
         buttonArray.forEach(button => {
           element.appendChild(button);
@@ -202,17 +217,36 @@ const MemberRegistration = () => {
       });
     }
   }
-  
+
 
   return (
     <div className="container-fluid bg-subtle">
+      <div className="container-fluid text-center pt-5 bg-reg1">
+        <img src={img1} alt="Logo" />
+      </div>
       <div className="row justify-content-center py-5">
-      <h2 className='text-center py-4'>Complete Your Profile</h2>
+        <h2 className='text-center py-4 text-light'>MEMBERSHIP FORM</h2>
         <div className="col-lg-8 col-md-6 col-sm-12 px-0">
-          <form onSubmit={handleSubmit} className='bg-light px-4 py-5 rounded pdf-style' id="formContainer">
+          <form onSubmit={handleSubmit} className='bg-light py-5 rounded pdf-style' id="formContainer">
+            <label htmlFor="membershipNumber" className='p-4 fw-bold fs-5'>
+              Membership No
+              <input type="number" className='memb bg-transparent'
+                value={formData.membershipNumber}
+                id="membershipNumber"
+                onChange={handleChange}
+                required />
+            </label>
+            <label htmlFor="membershipNumber" className='p-4 fw-bold fs-5'>
+              Date
+              <input type="date" className='memb px-2 ms-auto bg-transparent'
+                value={formData.membershipDate}
+                id="date"
+                onChange={handleChange}
+                required />
+            </label>
             {/* Personal Details */}
-            <h5 className="fw-bold">Personal Details</h5>
-            <div className="mx-auto">
+            <h5 className="fw-bold bg-subtle text-light py-3 px-4">Personal Information</h5>
+            <div className="mx-auto px-4">
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-lg-4">
@@ -229,7 +263,20 @@ const MemberRegistration = () => {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-lg-4 my-3">
-                    <label htmlFor="surname">Surname</label>
+                    <label htmlFor="surname">Last Name (Surname)</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-2"
+                      id="surname"
+                      value={formData.surname}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-lg-4 my-3">
+                    <label htmlFor="surname">Other Names</label>
                     <input
                       type="text"
                       className="form-control border-dark rounded-5 my-2"
@@ -250,11 +297,63 @@ const MemberRegistration = () => {
                       onChange={handleChange}
                       required
                     >
-                      <option value=""></option>
-                      <option value="Single">Single</option>
+                      <option value="Single" selected>Single</option>
                       <option value="Married">Married</option>
                       <option value="Divorce">Divorce</option>
                     </select>
+                  </div>
+
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-lg-4 my-3">
+                    <label htmlFor="motherName">Mother&apos;s Maiden Name</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-2 w-100"
+                      id="motherName"
+                      value={formData.motherName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-lg-4 my-3">
+                    <label htmlFor="motherName">Spouse Name( If Applicable)</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-2 w-100"
+                      id="motherName"
+                      value={formData.spouseName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-lg-4 my-3">
+                    <label htmlFor="motherName">Date of Birth</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-2 w-100"
+                      id="motherName"
+                      value={formData.dateOfBirth}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-lg-4 my-3">
+                    <label htmlFor="motherName">Place of Birth</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-2 w-100"
+                      id="motherName"
+                      value={formData.placeOfBirth}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
@@ -267,12 +366,27 @@ const MemberRegistration = () => {
                       value={formData.stateOfOrigin}
                       onChange={handleChange}
                       required
-                     />
+                    />
                   </div>
+
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-lg-4 my-3">
+                    <label htmlFor="stateOfOrigin">Home Town</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-2"
+                      id="stateOfOrigin"
+                      value={formData.homeTown}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
                 </div>
                 <div className="container-fluid">
                   <div className="row">
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-6 col-md-6 col-sm-12">
                       <div className="form-group my-lg-4 my-3">
                         <label htmlFor="nationality">Nationality</label>
                         <select
@@ -288,7 +402,7 @@ const MemberRegistration = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="col-lg-6 col-md-6 col-sm-12">
                       <div className="form-group my-lg-4 my-3">
                         <label htmlFor="gender">Gender</label>
                         <select
@@ -304,25 +418,44 @@ const MemberRegistration = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12">
+                  </div>
+                </div>
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6 col-sm-12">
                       <div className="form-group my-lg-4 my-3">
-                        <label htmlFor="motherName">Mother&apos;s Maiden Name</label>
+                        <label htmlFor="nationality">L.G.A</label>
                         <input
-                          type="text"
+                          id="lga"
                           className="form-control border-dark rounded-5 my-2"
-                          id="motherName"  
-                          value={formData.motherName}
+                          value={formData.lga}
                           onChange={handleChange}
                           required
                         />
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-sm-12">
+                      <div className="form-group my-lg-4 my-3">
+                        <label htmlFor="gender">Religion</label>
+                        <select
+                          id="religion"
+                          className="form-control border-dark rounded-5 my-2"
+                          value={formData.religion}
+                          onChange={handleChange}
+                          required
+                        >
+                          <option value=""></option>
+                          <option value="christian">Christian</option>
+                          <option value="Muslim">Muslim</option>
+                        </select>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Contact Details */}
-                <h5>Contact Details</h5>
-                <div className="col-lg-12 col-md-12 col-sm-12">
+                <h5 className='fw-bold bg-subtle text-light py-3 px-4'>Contact Details</h5>
+                <div className="col-lg-6 col-md-12 col-sm-12">
                   <div className="form-group my-3">
                     <label htmlFor="residenceAddress">Residence Address</label>
                     <input
@@ -335,21 +468,47 @@ const MemberRegistration = () => {
                     />
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-lg-4 col-md-6 col-sm-12">
-                    <div className="form-group my-3">
-                      <label htmlFor="town">Town/City</label>
-                      <input
-                        type="text"
-                        className="form-control border-dark rounded-5 my-3"
-                        id="town"
-                        value={formData.town}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
+                <div className="col-lg-6 col-md-12 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="residenceAddress">Landmark</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="landmark"
+                      value={formData.landmark}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
-                  <div className="col-lg-4 col-md-6 col-sm-12">
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="town">Local Government Residence</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="localGovernmentResidence"
+                      value={formData.localGovernmentResidence}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="town">Town/City</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="town"
+                      value={formData.town}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-lg-6 col-md-6 col-sm-12">
                     <div className="form-group my-3">
                       <label htmlFor="email">Email Address</label>
                       <input
@@ -362,7 +521,7 @@ const MemberRegistration = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-lg-4 col-md-6 col-sm-12">
+                  <div className="col-lg-6 col-md-6 col-sm-12">
                     <div className="form-group my-3">
                       <label htmlFor="mobileNumber">Mobile Number</label>
                       <input
@@ -376,10 +535,41 @@ const MemberRegistration = () => {
                     </div>
                   </div>
                 </div>
+                <div className="row">
+                  <div className="col-lg-6 col-md-6 col-sm-12">
+                      <div className="form-group my-lg-4 my-3">
+                        <label htmlFor="nationality">Nationality</label>
+                        <select
+                          id="nationality"
+                          className="form-control border-dark rounded-5 my-2"
+                          value={formData.nationality}
+                          onChange={handleChange}
+                          required
+                        >
+                          <option value=""></option>
+                          <option value="Nigerian">Nigerian</option>
+                          <option value="Foreign">Foreign</option>
+                        </select>
+                      </div>
+                    </div>
+                  <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="state">State</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="state"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                </div>
               </div>
 
               {/* Identification */}
-              <h5>Identification</h5>
+              <h5 className='fw-bold bg-subtle text-light py-3 px-4 mt-3'>Means Of Identification</h5>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
@@ -402,7 +592,7 @@ const MemberRegistration = () => {
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
                     <label htmlFor="identityNumber">Id Number</label>
-                     <input type='text' className="form-control border-dark rounded-5 my-3"
+                    <input type='text' className="form-control border-dark rounded-5 my-3"
                       id="identityNumber"
                       value={formData.identityNumber}
                       onChange={handleChange}
@@ -413,11 +603,11 @@ const MemberRegistration = () => {
               </div>
 
               {/* Employment Details */}
-              <h5>Employment Details</h5>
+              <h5 className='fw-bold bg-subtle text-light py-3 px-4 mt-5'>Employment Details</h5>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
-                    <label htmlFor="employmentStatus">Employment Status</label>
+                    <label htmlFor="employmentStatus">Business Employment Status</label>
                     <select
                       id="employmentStatus"
                       className="form-control border-dark rounded-5 my-3"
@@ -426,23 +616,31 @@ const MemberRegistration = () => {
                       required
                     >
                       <option value=""></option>
-                      <option value="Salary">Salary</option>
+                      <option value="Salary">Employed</option>
                       <option value="Self Employed">Self Employed</option>
                       <option value="Unemployed">Unemployed</option>
+                      <option value="Unemployed">Student</option>
+                      <option value="Unemployed">Others</option>
                     </select>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
-                    <label htmlFor="annualSalary">Annual Salary</label>
-                    <input
+                    <label htmlFor="annualSalary">Annual Salary/Income</label>
+                    <select
                       type="text"
                       className="form-control border-dark rounded-5 my-3"
                       id="annualSalary"
                       value={formData.annualSalary}
                       onChange={handleChange}
-                      required
-                    />
+                      required>
+
+                      <option value="0-500">0-500</option>
+                      <option value="50,000 - 500,000">50,000 - 500,000</option>
+                      <option value="500,000 - 1,000,000">500,000 - 1,000,000</option>
+                      <option value="1,000,000 - above">Above</option>
+          
+                    </select>
                   </div>
                 </div>
               </div>
@@ -474,18 +672,18 @@ const MemberRegistration = () => {
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                    <div className="form-group my-3">
-                      <label htmlFor="town">Town/City</label>
-                      <input
-                        type="text"
-                        className="form-control border-dark rounded-5 my-3"
-                        id="town"
-                        value={formData.town}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
+                  <div className="form-group my-3">
+                    <label htmlFor="town">Town/City</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="town"
+                      value={formData.town}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
+                </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
                     <label htmlFor="officePhoneNumber">Office Phone Number</label>
@@ -500,9 +698,22 @@ const MemberRegistration = () => {
                   </div>
                 </div>
               </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="natureOfBusiness">Nature of Business / Company</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="natureOfBusiness"
+                      value={formData.natureOfBusiness}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
 
               {/* Next of Kin */}
-              <h5>Next of Kin</h5>
+              <h5 className='fw-bold bg-subtle text-light py-3 px-4 mt-5'>Next of Kin</h5>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
@@ -637,21 +848,9 @@ const MemberRegistration = () => {
               </div>
 
               {/* Bank Details */}
-              <h5>Bank Details</h5>
+              <h5 className='fw-bold bg-subtle text-light py-3 px-4 mt-5'>Bank Details</h5>
               <div className="row">
-              <div className="col-lg-12 col-md-6 col-sm-12">
-                  <div className="form-group my-3">
-                    <label htmlFor="accountNumber">Bank Name</label>
-                    <input
-                      type="text"
-                      className="form-control border-dark rounded-5 my-3"
-                      id="bankName"
-                      value={formData.bankName}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                </div>
+                
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <div className="form-group my-3">
                     <label htmlFor="accountName">Account Name</label>
@@ -678,6 +877,45 @@ const MemberRegistration = () => {
                     />
                   </div>
                 </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="accountNumber">Bank Name</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="bankName"
+                      value={formData.bankName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="bankVerificationNumber">Bank Verification Number (BVN)</label>
+                    <input
+                      type="text"
+                      className="form-control border-dark rounded-5 my-3"
+                      id="bankVerificationNumber"
+                      value={formData.bankVerificationNumber}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-12">
+                  <div className="form-group my-3">
+                    <label htmlFor="signature">Signature
+                    <input
+                      type="text"
+                      className="form-control border-dark my-3 signature w-100"
+                      id="signature"
+                      value={formData.signature}
+                      onChange={handleChange}
+                      required
+                    /></label>
+                  </div>
+                </div>
               </div>
 
               <div className="text-center">
@@ -687,12 +925,12 @@ const MemberRegistration = () => {
                 <button
                   type="submit"
                   className="btn bg-reg w-50 btn-dark rounded-5 my-3 border-0"
-                  // disabled={!isProfileComplete}
+                // disabled={!isProfileComplete}
                 >
                   Save
                 </button>
 
-              
+
                 <button
                   type="button"
                   onClick={exportToPDF}
@@ -703,11 +941,11 @@ const MemberRegistration = () => {
                 </button>
 
               </div>
-              </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
-      </div>
-    
+      </div >
+    </div >
+
   );
-};export default MemberRegistration;
+}; export default MemberRegistration;

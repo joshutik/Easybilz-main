@@ -2,10 +2,12 @@
 import NavigationBar from '../NavigationBar/Navbar'
 import HeroSection from '../HeroSection/Heropage'
 import Services from "../Services/Services";
+import Ebanking from '../Ebanking/Ebanking'
 import Review from '../Review/Review';
 import Faq from '../FAQ/Faq';
 import ContactUs from '../ContactUs/Contact';
 import CallToAction from '../CallToAction/Calltoaction';
+import Management from '../Management/Management';
 import Footer from '../Footer/Footer';
 
 const Main = () => {
@@ -27,11 +29,17 @@ const Main = () => {
       <div id="services">
         <Services />
       </div>
+      <div id="ebanking">
+        <Ebanking />
+      </div>
       <div id="review">
         <Review />
       </div>
       <div id="faq">
         <Faq />
+      </div>
+      <div id="management">
+        <Management />
       </div>
       <div id="contact">
         <ContactUs />
