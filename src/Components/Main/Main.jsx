@@ -50,7 +50,7 @@ const Main = () => {
       <Footer />
       </div>
 
-      <Forms/>
+      {/* <Forms/> */}
     </div>
   )
 }
