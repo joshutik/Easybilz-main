@@ -87,7 +87,7 @@ const Services = () => {
                 <img src={img3} alt="" className="img-fluid w-75" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
-                Investment
+                Investment: easybillz mutual fund and agrovest
               </h5>
               <p className="card-text pb-4">
                 Our investment portfolio is open to members to earn at least 36%
@@ -103,13 +103,13 @@ const Services = () => {
                 <img src={img4} alt="" className="img-fluid w-75" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
-                Bill Managment
+                Bill management: payclob
               </h5>
               <p className="card-text pb-4">
                 Allow your savings and investment returns sort out bill
                 automatically without bordering yourself. This run on our payclob
                 platform.
-               
+
               </p>
             </div>
           </div>
@@ -119,16 +119,17 @@ const Services = () => {
                 <img src={img5} alt="" className="img-fluid w-75" />
               </div>
               <h5 className="card-title fs-3 fw-bold text-center my-4">
-                Distributorship and Logistics
+                Easybillz flexypay
               </h5>
               <p className="card-text">
-                We are into wholesale distribution and logistics. Members can
-                request for goods from their savings balance, or down payment
-                and as well our pay after order loan system
+                Easybillz flexypay is a payment system that allows you acquire properties and gadget from your savings or payment by instalment.
+                A payment schedule is spread according to your strengths for a short period of time.
+                Allocation of the properties is made on first payment and handover is made on completion.
+
               </p>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          {/* <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card bg-light w-100 px-3 py-4 rounded-5 border-0">
               <div className="mb-3 text-end position-absolute bottom-0 end-0">
                 <img src={img6} alt="" className="img-fluid w-75" />
@@ -144,8 +145,8 @@ const Services = () => {
                 </span>
               </p>
             </div>
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          </div> */}
+          {/* <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="card bg-light w-100 px-3 py-4 rounded-5 border-0">
               <div className="mb-3 text-end position-absolute bottom-0 end-0">
                 <img src={img6} alt="" className="img-fluid w-75" />
@@ -154,11 +155,6 @@ const Services = () => {
                 Consultancy
               </h5>
               <p className="card-text">
-                {/* In many cases people have money but do not know where to put the
-                money or invest in. That is why we want to help you set up
-                profitable businesses, manage it and make sure it gets the right
-                structure before handing it over to you. Eazybillz is the future
-                you’ve been dreaming about */}
                 We help your branding, business plan and registration, data and
                 financial analysis of your business, business growth expertise,
                 subletting services, asset and portfolio management, investment
@@ -168,7 +164,7 @@ const Services = () => {
                 </span>
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

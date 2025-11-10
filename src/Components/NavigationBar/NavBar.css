@@ -22,3 +22,154 @@
     border-bottom: 2px solid #FFDE00 !important; /* Add bottom border when focused */
     outline: none; /* Remove default focus outline if desired */
   }
+
+/* Dropdown Styling */
+.nav-item.dropdown .dropdown-menu {
+  background-color: #fff !important;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-item.dropdown .dropdown-item {
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item.dropdown .dropdown-item:hover {
+  background-color: #f1f1f1 ;
+}
+
+/* Sub-dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -5px;
+  display: none;
+  position: absolute;
+  background-color: #fff !important;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-submenu.show > .dropdown-menu {
+  display: block;
+}
+
+/* Arrow Indicator */
+/* .dropdown-submenu > .dropdown-toggle::after {
+background-color: white !;
+  float: right;
+  margin-left: 5px;
+} */
+
+/* Mobile Styles */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    position: static;
+    float: none;
+    box-shadow: none;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    left: 0;
+    margin-left: 1rem;
+  }
+}
+
+navbar .dropdown-menu {
+  background-color: #fff !important; /* Make background white */
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown links */
+.navbar .dropdown-menu .dropdown-item {
+  color: #000 !important; /* Black text for readability */
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1 !important; /* Light gray hover */
+  color: #000 !important;
+}
+
+/* Submenu styling */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  background-color: #fff !important; /* White background for submenus */
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav.navbar .dropdown-menu,
+nav.navbar .dropdown-menu.show,
+nav.navbar .dropdown-submenu > .dropdown-menu,
+nav.navbar .dropdown-submenu > .dropdown-menu.show,
+nav.navbar .nav-item.dropdown .dropdown-menu {
+  background-color: #ffffff !important;
+  background-image: none !important;   /* remove any gradient/image */
+  color: #000 !important;
+  border: none !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12) !important;
+}
+
+/* Make sure dropdown items are readable on white */
+nav.navbar .dropdown-menu .dropdown-item,
+nav.navbar .dropdown-menu li > a,
+nav.navbar .dropdown-menu li > button {
+  color: #111 !important;
+  background-color: transparent !important;
+}
+
+/* Hover/focus states */
+nav.navbar .dropdown-menu .dropdown-item:hover,
+nav.navbar .dropdown-menu .dropdown-item:focus {
+  background-color: #f5f5f5 !important;
+  color: #000 !important;
+}
+
+/* Submenu position + ensure white background */
+nav.navbar .dropdown-submenu {
+  position: relative !important;
+}
+nav.navbar .dropdown-submenu > .dropdown-menu {
+  top: 0 !important;
+  left: 100% !important;
+  margin-top: -1px !important;
+  background-color: #fff !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08) !important;
+  margin-left: 1rem;
+}
+
+/* If you have a custom "active" or "open" class applied, override it too */
+nav.navbar .dropdown-menu.open,
+nav.navbar .dropdown-menu.open.show {
+  background-color: #fff !important;
+}
+
+/* Small-screen adjustments (mobile) */
+@media (max-width: 991px) {
+  nav.navbar .dropdown-menu,
+  nav.navbar .dropdown-submenu > .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    box-shadow: none !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+ 

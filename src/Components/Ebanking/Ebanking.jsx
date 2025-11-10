@@ -7,7 +7,7 @@ const Calltoaction = () => {
     <div className="container-fluid py-5 CTA">
       <div className="container text-center">
         <h2 className="">
-          click the the link to get started with our e-banking services
+          Click the the link to get started with our e-banking services
         </h2>
         <div className='my-3 ms-auto'>
           <Link to={'https://easybillscoopebanking.bankplus.live/login'} className='btn btn-primary text-center btn-lg border-0 w-50 py-4 rounded-pill cta-btn '>E-banking

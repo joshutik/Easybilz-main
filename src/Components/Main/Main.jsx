@@ -49,6 +49,8 @@ const Main = () => {
       </div>
       <Footer />
       </div>
+
+      <Forms/>
     </div>
   )
 }

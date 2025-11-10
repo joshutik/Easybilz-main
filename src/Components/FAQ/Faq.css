@@ -50,11 +50,25 @@ background-color: #94cdfb !important;
     background-color: #343a40; /* Adjust as needed */
     color: #ffffff;
   }
-
+/* 
   .accordion-button {
     color: white !important;
-  }
+  } */
+
+  .accordion-button {
+  background-color: transparent !important;
+  color: white !important;
+  border: none;
+}
 
   .accordion-header {
     color: white !important;
   }
+
+  .accordion-button::after {
+  filter: brightness(0) invert(1); /* turns dark icon white */
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1); /* stays white when open */
+}
